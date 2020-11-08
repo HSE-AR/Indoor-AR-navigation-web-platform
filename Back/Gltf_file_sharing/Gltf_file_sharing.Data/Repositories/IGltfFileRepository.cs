@@ -1,4 +1,5 @@
 ﻿using Gltf_file_sharing.Data.Entities;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,15 +9,15 @@ namespace Gltf_file_sharing.Data.Repositories
 {
     public interface IGltfFileRepository
     {
-        Task<GltfFile> GetById(Guid id);
+        Task<GltfFile> GetByIdAsync(Guid id);
 
-        Task<ICollection<GltfFile>> Get();
+        Task<ICollection<GltfFile>> GetAsync();
 
-        Task<GltfFile> Create(GltfFile gltfFile);
+        Task<GltfFile> CreateAsync(IFormFile file);
 
-        Task<bool> Delete(Guid id);
+        Task<bool> DeleteAsync(Guid id);
 
-        Task<GltfFile> Update(GltfFile gltfFile);
+        Task<GltfFile> UpdateAsync(GltfFile gltfFile);
 
     }
 }

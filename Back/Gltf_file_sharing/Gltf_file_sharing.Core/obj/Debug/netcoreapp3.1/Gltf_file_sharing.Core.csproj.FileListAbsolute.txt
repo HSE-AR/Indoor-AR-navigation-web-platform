@@ -1,0 +1,12 @@
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Data.dll
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.csprojAssemblyReference.cache
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.AssemblyInfoInputs.cache
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.AssemblyInfo.cs
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Core.deps.json
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Core.dll
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Core.pdb
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Data.pdb
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.csproj.CoreCompileInputs.cache
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.csproj.CopyComplete
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.dll
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.pdb

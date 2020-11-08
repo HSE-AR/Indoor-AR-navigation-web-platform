@@ -2,13 +2,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Gltf_file_sharing.Core.EF;
+using Gltf_file_sharing.Core.Repositories;
+using Gltf_file_sharing.Core.Services;
+using Gltf_file_sharing.Core.Services.Impl;
+using Gltf_file_sharing.Data.Repositories;
+using Gltf_file_sharing.Data.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+
 
 namespace Gltf_file_sharing.API
 {
@@ -24,7 +32,20 @@ namespace Gltf_file_sharing.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services
+                .AddControllers()
+                .AddNewtonsoftJson(
+                x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+            AddRepositories(services);
+
+            AddSettings(services);
+
+            AddServices(services);
+
+            AddDbConnection(services);
+
+            AddCorsConfiguration(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,5 +65,40 @@ namespace Gltf_file_sharing.API
                 endpoints.MapControllers();
             });
         }
+
+        #region Private methods
+        private static void AddRepositories(IServiceCollection services)
+        {
+            services.AddTransient<IGltfFileRepository, GltfFileRepository>();
+        }
+
+        private static void AddServices(IServiceCollection services)
+        {
+            services.AddTransient<IStorageService, StorageService>();
+        }
+
+        private static void AddCorsConfiguration(IServiceCollection services) =>
+           services.AddCors(options => {
+               options.AddPolicy("AllowAll", builder =>
+               builder.AllowAnyOrigin()
+                      .AllowAnyMethod()
+                      .AllowAnyHeader());
+           });
+
+        private void AddSettings(IServiceCollection services)
+        {
+            services.Configure<EnvironmentConfig>(Configuration);
+        }
+
+        private void AddDbConnection(IServiceCollection services)
+        {
+            var connection = Configuration["DB_CONNECTION"];
+
+            services.AddDbContext<GltfContext>(options => options.UseSqlite(connection,
+                   b => b.MigrationsAssembly("Gltf_file_sharing.API")));
+
+        }
+
+        #endregion
     }
 }

@@ -15,5 +15,12 @@ namespace Gltf_file_sharing.Data.Entities
         public DateTime CreationDateTime { get; set; }
 
         public DateTime LastUpdateDateTime { get; set; }
+
+        public GltfFile(string name, DateTime creationDateTime)
+        {
+            Name = name;
+            CreationDateTime = creationDateTime;
+            LastUpdateDateTime = creationDateTime;
+        }
     }
 }
