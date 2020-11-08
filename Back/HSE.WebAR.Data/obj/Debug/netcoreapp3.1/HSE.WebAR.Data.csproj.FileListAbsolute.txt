@@ -1,0 +1,8 @@
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Data\bin\Debug\netcoreapp3.1\HSE.WebAR.Data.deps.json
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Data\bin\Debug\netcoreapp3.1\HSE.WebAR.Data.dll
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Data\bin\Debug\netcoreapp3.1\HSE.WebAR.Data.pdb
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Data\obj\Debug\netcoreapp3.1\HSE.WebAR.Data.AssemblyInfoInputs.cache
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Data\obj\Debug\netcoreapp3.1\HSE.WebAR.Data.AssemblyInfo.cs
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Data\obj\Debug\netcoreapp3.1\HSE.WebAR.Data.csproj.CoreCompileInputs.cache
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Data\obj\Debug\netcoreapp3.1\HSE.WebAR.Data.dll
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Data\obj\Debug\netcoreapp3.1\HSE.WebAR.Data.pdb

@@ -1,0 +1,12 @@
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\bin\Debug\netcoreapp3.1\HSE.WebAR.Core.deps.json
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\bin\Debug\netcoreapp3.1\HSE.WebAR.Core.dll
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\bin\Debug\netcoreapp3.1\HSE.WebAR.Core.pdb
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\bin\Debug\netcoreapp3.1\HSE.WebAR.Data.dll
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\bin\Debug\netcoreapp3.1\HSE.WebAR.Data.pdb
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\obj\Debug\netcoreapp3.1\HSE.WebAR.Core.csprojAssemblyReference.cache
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\obj\Debug\netcoreapp3.1\HSE.WebAR.Core.AssemblyInfoInputs.cache
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\obj\Debug\netcoreapp3.1\HSE.WebAR.Core.AssemblyInfo.cs
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\obj\Debug\netcoreapp3.1\HSE.WebAR.Core.csproj.CoreCompileInputs.cache
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\obj\Debug\netcoreapp3.1\HSE.WebAR.Core.csproj.CopyComplete
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\obj\Debug\netcoreapp3.1\HSE.WebAR.Core.dll
+C:\Users\Alexander\Desktop\TEST-AR\Back\HSE.WebAR.Core\obj\Debug\netcoreapp3.1\HSE.WebAR.Core.pdb

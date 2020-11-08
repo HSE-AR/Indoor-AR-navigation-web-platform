@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "HSE.WebAR.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "HSE.WebAR.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HSE.WebAR.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HSE.WebAR.Core.dll": {}
+        }
+      },
+      "HSE.WebAR.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/HSE.WebAR.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HSE.WebAR.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HSE.WebAR.Core/1.0.0": {
+      "type": "project",
+      "path": "../HSE.WebAR.Core/HSE.WebAR.Core.csproj",
+      "msbuildProject": "../HSE.WebAR.Core/HSE.WebAR.Core.csproj"
+    },
+    "HSE.WebAR.Data/1.0.0": {
+      "type": "project",
+      "path": "../HSE.WebAR.Data/HSE.WebAR.Data.csproj",
+      "msbuildProject": "../HSE.WebAR.Data/HSE.WebAR.Data.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "HSE.WebAR.Core >= 1.0.0",
+      "HSE.WebAR.Data >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Alexander\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\HSE.WebAR\\HSE.WebAR.API.csproj",
+      "projectName": "HSE.WebAR.API",
+      "projectPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\HSE.WebAR\\HSE.WebAR.API.csproj",
+      "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\HSE.WebAR\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\HSE.WebAR.Core\\HSE.WebAR.Core.csproj": {
+              "projectPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\HSE.WebAR.Core\\HSE.WebAR.Core.csproj"
+            },
+            "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\HSE.WebAR.Data\\HSE.WebAR.Data.csproj": {
+              "projectPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\HSE.WebAR.Data\\HSE.WebAR.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
