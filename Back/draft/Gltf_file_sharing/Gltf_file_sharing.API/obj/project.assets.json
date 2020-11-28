@@ -335,6 +335,27 @@
           "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "SharpGLTF.Core/1.0.0-alpha0020": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/SharpGLTF.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/SharpGLTF.Core.dll": {}
+        }
+      },
+      "SharpGLTF.Toolkit/1.0.0-alpha0020": {
+        "type": "package",
+        "dependencies": {
+          "SharpGLTF.Core": "1.0.0-alpha0020"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/SharpGLTF.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/SharpGLTF.Toolkit.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -1054,6 +1075,38 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
+    "SharpGLTF.Core/1.0.0-alpha0020": {
+      "sha512": "9NKvMD5lL7AVXQ+9bRKDhzmEvXTatpdrybd3F2uZVJsXR/cOkdJl+g4xBy6fjKsILTNUPWXcyquAyo/Pjs1uCw==",
+      "type": "package",
+      "path": "sharpgltf.core/1.0.0-alpha0020",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "glTF2Sharp.png",
+        "lib/netcoreapp3.1/SharpGLTF.Core.dll",
+        "lib/netcoreapp3.1/SharpGLTF.Core.xml",
+        "lib/netstandard2.0/SharpGLTF.Core.dll",
+        "lib/netstandard2.0/SharpGLTF.Core.xml",
+        "sharpgltf.core.1.0.0-alpha0020.nupkg.sha512",
+        "sharpgltf.core.nuspec"
+      ]
+    },
+    "SharpGLTF.Toolkit/1.0.0-alpha0020": {
+      "sha512": "1PMz5cGvUhmLqR581bjbuPZNuNAvD/+FdciPWV4H2Gl2cPDou/6xbKqYseRsebkJNYMYhLP5+LKu01SZawW/Qw==",
+      "type": "package",
+      "path": "sharpgltf.toolkit/1.0.0-alpha0020",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "glTF2Sharp.png",
+        "lib/netcoreapp3.1/SharpGLTF.Toolkit.dll",
+        "lib/netcoreapp3.1/SharpGLTF.Toolkit.xml",
+        "lib/netstandard2.0/SharpGLTF.Toolkit.dll",
+        "lib/netstandard2.0/SharpGLTF.Toolkit.xml",
+        "sharpgltf.toolkit.1.0.0-alpha0020.nupkg.sha512",
+        "sharpgltf.toolkit.nuspec"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
       "sha512": "OVPI/nh5AqfLCIKhAYqjCa6AHhc7oKApGcGM3UhMRSerFiBx58nSpGwxVFdMgjOCWZR+fA49nzsnKlWp5hFo8w==",
       "type": "package",
@@ -1355,7 +1408,9 @@
       "Gltf_file_sharing.Data >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.9",
       "Microsoft.EntityFrameworkCore >= 3.1.9",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.9"
+      "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.9",
+      "SharpGLTF.Core >= 1.0.0-alpha0020",
+      "SharpGLTF.Toolkit >= 1.0.0-alpha0020"
     ]
   },
   "packageFolders": {
@@ -1417,6 +1472,14 @@
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
             "version": "[3.1.9, )"
+          },
+          "SharpGLTF.Core": {
+            "target": "Package",
+            "version": "[1.0.0-alpha0020, )"
+          },
+          "SharpGLTF.Toolkit": {
+            "target": "Package",
+            "version": "[1.0.0-alpha0020, )"
           }
         },
         "imports": [

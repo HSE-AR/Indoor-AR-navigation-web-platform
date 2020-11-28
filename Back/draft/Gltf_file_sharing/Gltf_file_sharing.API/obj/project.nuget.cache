@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kbo07nWYEzSMXFRtcOajnOQvYltS1wauZ6KOm9Fi7CAsbq4CZdvmsr9/qNNBpqd/1enZBzIiq8fz+aQp6ys7FQ==",
+  "dgSpecHash": "nca8To43x1LU8JlMRLxluEUIS8C0x2800zCnzzfFlbdDCNeEaLLhwYAZJS6cwNuWhqrTrmMhu64uG0/7DoJoiw==",
   "success": true,
   "projectFilePath": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.API\\Gltf_file_sharing.API.csproj",
   "expectedPackageFiles": [
@@ -32,6 +32,8 @@
     "C:\\Users\\X1CARBON\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.9\\microsoft.extensions.primitives.3.1.9.nupkg.sha512",
     "C:\\Users\\X1CARBON\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\X1CARBON\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\X1CARBON\\.nuget\\packages\\sharpgltf.core\\1.0.0-alpha0020\\sharpgltf.core.1.0.0-alpha0020.nupkg.sha512",
+    "C:\\Users\\X1CARBON\\.nuget\\packages\\sharpgltf.toolkit\\1.0.0-alpha0020\\sharpgltf.toolkit.1.0.0-alpha0020.nupkg.sha512",
     "C:\\Users\\X1CARBON\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.2\\sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",
     "C:\\Users\\X1CARBON\\.nuget\\packages\\sqlitepclraw.core\\2.0.2\\sqlitepclraw.core.2.0.2.nupkg.sha512",
     "C:\\Users\\X1CARBON\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.2\\sqlitepclraw.lib.e_sqlite3.2.0.2.nupkg.sha512",
