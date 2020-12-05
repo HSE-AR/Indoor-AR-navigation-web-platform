@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Alexander\\.nuget\\packages\\": {}
+    "C:\\Users\\X1CARBON\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\HSE.WebAR.Data\\HSE.WebAR.Data.csproj",
+      "projectUniqueName": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\HSE.WebAR.Data\\HSE.WebAR.Data.csproj",
       "projectName": "HSE.WebAR.Data",
-      "projectPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\HSE.WebAR.Data\\HSE.WebAR.Data.csproj",
-      "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\HSE.WebAR.Data\\obj\\",
+      "projectPath": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\HSE.WebAR.Data\\HSE.WebAR.Data.csproj",
+      "packagesPath": "C:\\Users\\X1CARBON\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\HSE.WebAR.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\X1CARBON\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

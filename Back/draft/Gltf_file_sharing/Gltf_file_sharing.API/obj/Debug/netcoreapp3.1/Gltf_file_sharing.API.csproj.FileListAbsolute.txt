@@ -140,3 +140,12 @@ C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf
 C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\bin\Debug\netcoreapp3.1\SharpGLTF.Toolkit.dll
 C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\obj\Debug\netcoreapp3.1\Gltf_file_sharing.API.csproj.CoreCompileInputs.cache
 C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\obj\Debug\netcoreapp3.1\Gltf_file_sharing.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\bin\Debug\netcoreapp3.1\DnsClient.dll
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\bin\Debug\netcoreapp3.1\runtimes\win\native\libzstd.dll
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy32.dll
+C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy64.dll

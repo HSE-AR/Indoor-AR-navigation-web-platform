@@ -111,7 +111,7 @@ namespace Gltf_file_sharing.API.Controllers
             var material1 = new MaterialBuilder()
                .WithDoubleSide(true)
                .WithMetallicRoughnessShader()
-               .WithChannelParam("BaseColor", new Vector4(1, 0, 0, 1));
+               .WithChannelParam("BaseColor", new Vector4(1, 1, 0, 1));
 
 
             // create a mesh with two primitives, one for each material
@@ -121,11 +121,11 @@ namespace Gltf_file_sharing.API.Controllers
             var prim = mesh.UsePrimitive(material1);
 
             prim.AddQuadrangle(new VERTEX(x, y, z), new VERTEX(x+w, y, z), new VERTEX(x+w, y+l, z), new VERTEX(x, y+l, z));
-            prim.AddQuadrangle(new VERTEX(x, y, z), new VERTEX(x + w, y, z), new VERTEX(x, y, z+h), new VERTEX(x + w, y, z+h));
+            prim.AddQuadrangle(new VERTEX(x, y, z), new VERTEX(x + w, y, z), new VERTEX(x + w, y, z+h), new VERTEX(x, y, z+h));
             prim.AddQuadrangle(new VERTEX(x, y, z+h), new VERTEX(x + w, y, z+h), new VERTEX(x + w, y + l, z+h), new VERTEX(x, y + l, z+h));
-            prim.AddQuadrangle(new VERTEX(x, y+l, z), new VERTEX(x + w, y+l, z), new VERTEX(x, y+l, z + h), new VERTEX(x + w, y+l, z + h));
-            prim.AddQuadrangle(new VERTEX(x+w, y+l, z), new VERTEX(x + w, y, z), new VERTEX(x + w, y + l, z+h), new VERTEX(x + w, y,z+h));
-            prim.AddQuadrangle(new VERTEX(x, y + l, z), new VERTEX(x, y, z), new VERTEX(x, y + l, z + h), new VERTEX(x, y, z + h));
+            prim.AddQuadrangle(new VERTEX(x, y+l, z), new VERTEX(x + w, y+l, z), new VERTEX(x + w, y+l, z + h), new VERTEX(x, y+l, z + h));
+            prim.AddQuadrangle(new VERTEX(x+w, y+l, z), new VERTEX(x + w, y, z), new VERTEX(x + w, y,z+h), new VERTEX(x + w, y + l, z+h));
+            prim.AddQuadrangle(new VERTEX(x, y + l, z), new VERTEX(x, y, z), new VERTEX(x, y, z + h), new VERTEX(x, y + l, z + h));
 
             // create a scene
 

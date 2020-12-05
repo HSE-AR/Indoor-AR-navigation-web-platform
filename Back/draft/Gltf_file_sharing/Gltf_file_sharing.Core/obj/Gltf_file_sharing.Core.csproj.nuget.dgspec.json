@@ -56,6 +56,10 @@
             "Microsoft.Extensions.Options": {
               "target": "Package",
               "version": "[3.1.9, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.11.5, )"
             }
           },
           "imports": [
@@ -117,6 +121,10 @@
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[3.1.9, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.11.5, )"
             }
           },
           "imports": [

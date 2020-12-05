@@ -16,7 +16,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-
+using Microsoft.Extensions.Options;
 
 namespace Gltf_file_sharing.API
 {
@@ -70,10 +70,15 @@ namespace Gltf_file_sharing.API
         private static void AddRepositories(IServiceCollection services)
         {
             services.AddTransient<IGltfFileRepository, GltfFileRepository>();
+            services.AddSingleton<ModelsRepository>();
         }
 
         private static void AddServices(IServiceCollection services)
         {
+
+
+            services.AddSingleton<IModelsDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<ModelsDatabaseSettings>>().Value);
             services.AddTransient<IStorageService, StorageService>();
         }
 
@@ -88,6 +93,8 @@ namespace Gltf_file_sharing.API
         private void AddSettings(IServiceCollection services)
         {
             services.Configure<EnvironmentConfig>(Configuration);
+            services.Configure<ModelsDatabaseSettings>(
+                        Configuration.GetSection(nameof(ModelsDatabaseSettings)));
         }
 
         private void AddDbConnection(IServiceCollection services)

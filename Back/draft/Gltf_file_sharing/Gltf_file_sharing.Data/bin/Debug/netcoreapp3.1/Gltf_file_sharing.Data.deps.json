@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v3.1": {
       "Gltf_file_sharing.Data/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "3.1.9"
+          "Microsoft.AspNetCore.Http.Features": "3.1.9",
+          "MongoDB.Bson": "2.11.5"
         },
         "runtime": {
           "Gltf_file_sharing.Data.dll": {}
@@ -31,6 +32,14 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {
             "assemblyVersion": "3.1.9.0",
             "fileVersion": "3.100.920.47302"
+          }
+        }
+      },
+      "MongoDB.Bson/2.11.5": {
+        "runtime": {
+          "lib/netstandard2.0/MongoDB.Bson.dll": {
+            "assemblyVersion": "2.11.5.0",
+            "fileVersion": "2.11.5.0"
           }
         }
       },
@@ -63,6 +72,13 @@
       "sha512": "sha512-IrHecH0eGG7/XoeEtv++oLg/sJHRNyeCqlA9RhAo6ig4GpOTjtDr32sBMYuuLtUq8ALahneWkrOzoBAwJ4L4iA==",
       "path": "microsoft.extensions.primitives/3.1.9",
       "hashPath": "microsoft.extensions.primitives.3.1.9.nupkg.sha512"
+    },
+    "MongoDB.Bson/2.11.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OWsEN7ktxFKcynAMdv08TE5wkL1kkyWJUv+zhO3H3HcK+S4AU52AnxoyVmVSdPk5OWYoTtzbeCOIdmZV2dk5zg==",
+      "path": "mongodb.bson/2.11.5",
+      "hashPath": "mongodb.bson.2.11.5.nupkg.sha512"
     },
     "System.IO.Pipelines/4.7.3": {
       "type": "package",
