@@ -6,15 +6,15 @@ import store from './store'
 
 // import * as THREE from './js/three/build/three.module.js';
 /* eslint-disable */
-import * as THREE from '../public/three/build/three.module'
-import { Editor } from '../public/three/editor/js/Editor.js';
-import { Viewport } from '../public/three/editor/js/Viewport.js';
-import { Toolbar } from '../public/three/editor/js/Toolbar.js';
-import { Script } from '../public/three/editor/js/Script.js';
-import { Player } from '../public/three/editor/js/Player.js';
-import { Sidebar } from '../public/three/editor/js/Sidebar.js';
-import { Menubar } from '../public/three/editor/js/Menubar.js';
-import { Resizer } from '../public/three/editor/js/Resizer.js';
+import * as THREE from '../public/threejs/build/three.module'
+import { Editor } from '../public/threejs/editor/js/Editor.js';
+import { Viewport } from '../public/threejs/editor/js/Viewport.js';
+import { Toolbar } from '../public/threejs/editor/js/Toolbar.js';
+import { Script } from '../public/threejs/editor/js/Script.js';
+import { Player } from '../public/threejs/editor/js/Player.js';
+import { Sidebar } from '../public/threejs/editor/js/Sidebar.js';
+import { Menubar } from '../public/threejs/editor/js/Menubar.js';
+import { Resizer } from '../public/threejs/editor/js/Resizer.js';
 
 
 
