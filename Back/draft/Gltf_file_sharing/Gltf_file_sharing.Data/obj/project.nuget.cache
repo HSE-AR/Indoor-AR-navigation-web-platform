@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "EMfRhj5O0QSlD2C4/uVDTqgiRb00jMr4poTqsNAGGL1V1G8iNhr15aQIj+wotF6TvDh75YhIs6qrfkNknVxNvQ==",
+  "dgSpecHash": "aBuYcUh1SVRuAYbTGnhZW/irqBOWFb4oiaoK4rjMz33d5dAsY/vBis7cKx7/9UxMxIqhpdC3/b5ugzq+7EjPuw==",
   "success": true,
   "projectFilePath": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\X1CARBON\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.9\\microsoft.aspnetcore.http.features.3.1.9.nupkg.sha512",
     "C:\\Users\\X1CARBON\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.9\\microsoft.extensions.primitives.3.1.9.nupkg.sha512",
     "C:\\Users\\X1CARBON\\.nuget\\packages\\mongodb.bson\\2.11.5\\mongodb.bson.2.11.5.nupkg.sha512",
+    "C:\\Users\\X1CARBON\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\X1CARBON\\.nuget\\packages\\system.io.pipelines\\4.7.3\\system.io.pipelines.4.7.3.nupkg.sha512"
   ],
   "logs": []

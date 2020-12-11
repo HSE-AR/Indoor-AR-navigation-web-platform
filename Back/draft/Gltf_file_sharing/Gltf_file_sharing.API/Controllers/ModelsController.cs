@@ -1,6 +1,9 @@
 ﻿using Gltf_file_sharing.Core.Repositories;
+using Gltf_file_sharing.Data.DTO;
 using Gltf_file_sharing.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,12 +23,12 @@ namespace Gltf_file_sharing.API.Controllers
             }
 
             [HttpGet]
-            public async Task<ActionResult<ICollection<Model>>> Get() =>
+            public async Task<ActionResult<ICollection<ModelDto>>> Get() =>
                  new JsonResult(await _modelsRepository.Get());
  
 
             [HttpGet("{id:length(24)}", Name = "GetModel")]
-            public async Task<ActionResult<Model>> Get(string id)
+            public async Task<ActionResult<ModelDto>> Get(string id)
             {
                 var model = await _modelsRepository.Get(id);
 
@@ -38,11 +41,9 @@ namespace Gltf_file_sharing.API.Controllers
             }
 
             [HttpPost]
-            public async Task<ActionResult<Model>> Create([FromBody]Model model)
+            public async Task<ActionResult<Model>> Create([FromBody]ModelDto modelDto)
             {
-                await _modelsRepository.Create(model);
-
-                return CreatedAtRoute("GetModel", new { id = model.Id.ToString() }, model);
+               return await _modelsRepository.Create(modelDto);
             }
 
             [HttpPut("{id:length(24)}")]

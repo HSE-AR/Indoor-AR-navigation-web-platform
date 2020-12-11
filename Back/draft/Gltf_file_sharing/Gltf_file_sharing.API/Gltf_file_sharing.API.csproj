@@ -8,6 +8,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.9" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.5" />
     <PackageReference Include="SharpGLTF.Core" Version="1.0.0-alpha0020" />
     <PackageReference Include="SharpGLTF.Toolkit" Version="1.0.0-alpha0020" />
   </ItemGroup>
@@ -16,6 +17,8 @@
     <ProjectReference Include="..\Gltf_file_sharing.Core\Gltf_file_sharing.Core.csproj" />
     <ProjectReference Include="..\Gltf_file_sharing.Data\Gltf_file_sharing.Data.csproj" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 
 </Project>

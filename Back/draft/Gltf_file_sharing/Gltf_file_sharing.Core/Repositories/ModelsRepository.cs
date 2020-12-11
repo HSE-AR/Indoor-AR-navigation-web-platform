@@ -1,5 +1,8 @@
-﻿using Gltf_file_sharing.Data.Entities;
+﻿using Gltf_file_sharing.Data.Converters;
+using Gltf_file_sharing.Data.DTO;
+using Gltf_file_sharing.Data.Entities;
 using Gltf_file_sharing.Data.Settings;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -20,15 +23,21 @@ namespace Gltf_file_sharing.Core.Repositories
             _models= database.GetCollection<Model>(settings.ModelsCollectionName);
         }
 
-        public async Task<ICollection<Model>> Get() =>
-             await _models.Find(book => true).ToListAsync();
+        public async Task<ICollection<ModelDto>> Get() =>
+             ModelConverter.Convert(await _models.Find(m => true).ToListAsync());
 
-        public async Task<Model> Get(string id) =>
-            await _models.Find<Model>(m => m.Id == id).FirstOrDefaultAsync();
+        public async Task<ModelDto> Get(string id) =>
+            ModelConverter.Convert(await _models.Find(m => m.Id == id).FirstOrDefaultAsync());
 
 
-        public async Task<Model> Create(Model model)
+        public async Task<Model> Create(ModelDto modelDto)
         {
+            Model model = new Model
+            {
+                Name = modelDto.Name,
+                Scene = BsonDocument.Parse(modelDto.Scene.ToString()),
+                CreatedAtUtc = DateTime.Now
+            };
             await _models.InsertOneAsync(model);
             return model;
         }

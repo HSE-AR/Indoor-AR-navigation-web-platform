@@ -12,8 +12,12 @@ namespace Gltf_file_sharing.Data.Entities
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        [BsonElement("Name")]
-        public string ModelName { get; set; }
+
+        public string Name { get; set; }
+
+        public DateTime CreatedAtUtc { get; set; }
+
+        public BsonDocument Scene { get; set; }
 
 
     }
