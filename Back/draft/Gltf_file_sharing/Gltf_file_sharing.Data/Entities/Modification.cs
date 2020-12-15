@@ -14,7 +14,7 @@ namespace Gltf_file_sharing.Data.Entities
 
         public DateTime EditedAtUtc { get; set; }
 
-        public ModificationType Type { get; set; }
+        public ModificationTypes Type { get; set; }
 
         public ObjectTypes ObjectType { get; set; }
         
@@ -24,7 +24,7 @@ namespace Gltf_file_sharing.Data.Entities
     }
 
 
-    public enum ObjectTypes { Object, Material, Geometry };
+    public enum ObjectTypes { Object, Material, Geometry, ObjectChildren };
 
-    public enum ModificationType { Delete, Update, Add };
+    public enum ModificationTypes { Delete, Update, Add };
 }

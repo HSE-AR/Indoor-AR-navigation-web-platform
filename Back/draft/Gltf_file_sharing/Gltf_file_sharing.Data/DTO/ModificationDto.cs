@@ -13,7 +13,7 @@ namespace Gltf_file_sharing.Data.DTO
 
         public DateTime EditedAtUtc { get; set; }
 
-        public ModificationType Type { get; set; }
+        public ModificationTypes Type { get; set; }
 
         public ObjectTypes ObjectType { get; set; }
 
