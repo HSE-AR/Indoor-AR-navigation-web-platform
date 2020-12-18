@@ -1,9 +1,10 @@
-import { UIPanel } from './libs/ui.js';
-import { APP } from './libs/app.js';
+// import { UIPanel } from './libs/ui.js';
+// import { APP } from './libs/app.js';
 
 function Player( editor ) {
+	console.log("Player нам не нужен")
 
-	var signals = editor.signals;
+	/*var signals = editor.signals;
 
 	var container = new UIPanel();
 	container.setId( 'player' );
@@ -41,7 +42,7 @@ function Player( editor ) {
 	} );
 
 	return container;
-
+*/
 }
 
 export { Player };

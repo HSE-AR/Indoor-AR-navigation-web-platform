@@ -4,7 +4,7 @@ import { Config } from './Config.js';
 import { Loader } from './Loader.js';
 import { History as _History } from './History.js';
 import { Strings } from './Strings.js';
-import { Storage as _Storage } from './Storage.js';
+//import { Storage as _Storage } from './Storage.js';
 
 var _DEFAULT_CAMERA = new THREE.PerspectiveCamera( 50, 1, 0.01, 1000 );
 _DEFAULT_CAMERA.name = 'Camera';
@@ -87,7 +87,7 @@ function Editor() {
 
 	this.config = new Config();
 	this.history = new _History( this );
-	this.storage = new _Storage();
+	//this.storage = new _Storage();
 	this.strings = new Strings( this.config );
 
 	this.loader = new Loader( this );
@@ -517,12 +517,12 @@ Editor.prototype = {
 
 	},
 
-	setViewportCamera: function ( uuid ) {
+	// setViewportCamera: function ( uuid ) {
 
-		this.viewportCamera = this.cameras[ uuid ];
-		this.signals.viewportCameraChanged.dispatch();
+	// 	this.viewportCamera = this.cameras[ uuid ];
+	// 	this.signals.viewportCameraChanged.dispatch();
 
-	},
+	// },
 
 	//
 

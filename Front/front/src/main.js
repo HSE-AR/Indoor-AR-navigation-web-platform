@@ -10,11 +10,12 @@ import * as THREE from '../public/threejs/build/three.module'
 import { Editor } from '../public/threejs/editor/js/Editor.js';
 import { Viewport } from '../public/threejs/editor/js/Viewport.js';
 import { Toolbar } from '../public/threejs/editor/js/Toolbar.js';
-import { Script } from '../public/threejs/editor/js/Script.js';
-import { Player } from '../public/threejs/editor/js/Player.js';
 import { Sidebar } from '../public/threejs/editor/js/Sidebar.js';
 import { Menubar } from '../public/threejs/editor/js/Menubar.js';
 import { Resizer } from '../public/threejs/editor/js/Resizer.js';
+
+import { AddObjectCommand } from '../public/threejs/editor/js/commands/AddObjectCommand.js';
+import { SetSceneCommand } from '../public/threejs/editor/js/commands/SetSceneCommand.js';
 
 
 
@@ -27,4 +28,4 @@ new Vue({
 }).$mount('#app')
  
 
-export { THREE,Editor,Viewport,Toolbar,Script,Player,Sidebar,Menubar,Resizer};
+export { THREE,Editor,Viewport,Toolbar,Sidebar,Menubar,Resizer,AddObjectCommand,SetSceneCommand};

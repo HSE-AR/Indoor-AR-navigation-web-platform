@@ -26,10 +26,10 @@ namespace Gltf_file_sharing.Core.Repositories
         }
 
         public async Task<ICollection<ModelDto>> GetAsync() =>
-             ModelConverter.Convert(await _models.Find(m => true).ToListAsync());
+            => ModelConverter.Convert(await _models.Find(m => true).ToListAsync());
 
         public async Task<ModelDto> GetAsync(string id) =>
-            ModelConverter.Convert(await _models.Find(m => m.Id == id).FirstOrDefaultAsync());
+            => ModelConverter.Convert(await _models.Find(m => m.Id == id).FirstOrDefaultAsync());
 
 
         public async Task<ModelDto> CreateAsync(ModelDto modelDto)
@@ -45,7 +45,7 @@ namespace Gltf_file_sharing.Core.Repositories
         }
 
         public async Task<ReplaceOneResult> UpdateAsync(string id, Model modelIn) =>
-          await  _models.ReplaceOneAsync(m => m.Id == id, modelIn);
+            => await  _models.ReplaceOneAsync(m => m.Id == id, modelIn);
 
         public async Task<DeleteResult> RemoveAsync(ModelDto modelIn) =>
             await _models.DeleteOneAsync(model => model.Id == modelIn.Id);
