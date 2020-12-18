@@ -200,16 +200,6 @@ function SidebarProject( editor ) {
 	buttonsRow.setPadding( '10px 0px' );
 	materials.add( buttonsRow );
 
-	/*
-	var addButton = new UI.Button().setLabel( 'Add' ).setMarginRight( '5px' );
-	addButton.onClick( function () {
-
-		editor.addMaterial( new THREE.MeshStandardMaterial() );
-
-	} );
-	buttonsRow.add( addButton );
-	*/
-
 	var assignMaterial = new UIButton().setLabel( strings.getKey( 'sidebar/project/Assign' ) ).setMargin( '0px 5px' );
 	assignMaterial.onClick( function () {
 

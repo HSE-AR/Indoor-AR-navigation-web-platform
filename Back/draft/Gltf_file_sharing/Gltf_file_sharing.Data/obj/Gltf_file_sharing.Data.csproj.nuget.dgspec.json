@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj": {}
+    "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj": {
+    "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj",
         "projectName": "Gltf_file_sharing.Data",
-        "projectPath": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj",
-        "packagesPath": "C:\\Users\\X1CARBON\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\obj\\",
+        "projectPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj",
+        "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\X1CARBON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

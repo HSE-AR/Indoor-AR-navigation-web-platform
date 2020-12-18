@@ -17,14 +17,17 @@ namespace Gltf_file_sharing.API.Controllers
        
         private readonly MongoClient _client;
         private readonly IMongoDatabase _database;
+        private readonly IMongoDatabase _testDatabase;
         private readonly IMongoCollection<BsonDocument> _models;
 
         public TestController()
         {
             _client = new MongoClient("mongodb://localhost:27017");
             _database = _client.GetDatabase("ModelsDb");
+            _testDatabase = _client.GetDatabase("test");
             _models = _database.GetCollection<BsonDocument>("Models");
         }
+        
         [HttpPost]
         public ActionResult Modification([FromBody] ModificationDto modificationDto)
         {
@@ -132,6 +135,21 @@ namespace Gltf_file_sharing.API.Controllers
             
             return new JsonResult("kek");
         }
+
+        [HttpGet]
+        public async Task<string> GetTestString()
+        {
+            var modelsBson = _testDatabase.GetCollection<Model>("models");
+            
+            var filter = new BsonDocument();
+            var cursor = await modelsBson.FindAsync(filter);
+            cursor.MoveNextAsync();
+
+            var people = cursor.Current;
+            
+            return people.First().Scene.ToJson();
+        }
+        
         //[HttpGet]
         //public ActionResult<string> Get()
         //{

@@ -43,6 +43,78 @@ function Loader( editor ) {
 		} );
 
 	};
+	
+	this.MyLoader  =function (data) {
+		
+
+		if ( data.metadata === undefined ) { // 2.0
+
+			data.metadata = { type: 'Geometry' };
+
+		}
+
+		if ( data.metadata.type === undefined ) { // 3.0
+
+			data.metadata.type = 'Geometry';
+
+		}
+
+		if ( data.metadata.formatVersion !== undefined ) {
+
+			data.metadata.version = data.metadata.formatVersion;
+
+		}
+
+		switch ( data.metadata.type.toLowerCase() ) {
+
+			case 'buffergeometry':
+
+				var loader = new THREE.BufferGeometryLoader();
+				var result = loader.parse( data );
+
+				var mesh = new THREE.Mesh( result );
+				console.log("999999" );
+				editor.execute( new AddObjectCommand( editor, mesh ) );
+
+				break;
+
+			case 'geometry':
+
+				console.error( 'Loader: "Geometry" is no longer supported.' );
+
+				break;
+
+			case 'object':
+
+				var loader = new THREE.ObjectLoader();
+				loader.setResourcePath( scope.texturePath );
+
+				loader.parse( data, function ( result ) {
+
+					if ( result.isScene ) {
+						console.log("****" );
+						editor.execute( new SetSceneCommand( editor, result ) );
+
+					} else {
+						console.log("$$$$" );
+						editor.execute( new AddObjectCommand( editor, result ) );
+
+					}
+
+				} );
+
+				break;
+
+			case 'app':
+
+				editor.fromJSON( data );
+
+				break;
+
+		}
+
+	};
+
 
 	this.loadFiles = function ( files, filesMap ) {
 
@@ -72,6 +144,7 @@ function Loader( editor ) {
 			manager.addHandler( /\.tga$/i, new TGALoader() );
 
 			for ( var i = 0; i < files.length; i ++ ) {
+				console.log( '12323123' );
 
 				scope.loadFile( files[ i ], manager );
 
@@ -297,11 +370,15 @@ function Loader( editor ) {
 
 			case 'js':
 			case 'json':
+			
+
 
 			case '3geo':
+
 			case '3mat':
 			case '3obj':
 			case '3scn':
+			
 
 				reader.addEventListener( 'load', function ( event ) {
 
@@ -317,7 +394,6 @@ function Loader( editor ) {
 						var worker = new Worker( url );
 
 						worker.onmessage = function ( event ) {
-
 							event.data.metadata = { version: 2 };
 							handleJSON( event.data );
 
@@ -343,7 +419,6 @@ function Loader( editor ) {
 						return;
 
 					}
-
 					handleJSON( data );
 
 				}, false );
@@ -588,6 +663,7 @@ function Loader( editor ) {
 	};
 
 	function handleJSON( data ) {
+		
 
 		if ( data.metadata === undefined ) { // 2.0
 
@@ -615,7 +691,7 @@ function Loader( editor ) {
 				var result = loader.parse( data );
 
 				var mesh = new THREE.Mesh( result );
-
+				console.log("999999" );
 				editor.execute( new AddObjectCommand( editor, mesh ) );
 
 				break;
@@ -634,11 +710,11 @@ function Loader( editor ) {
 				loader.parse( data, function ( result ) {
 
 					if ( result.isScene ) {
-
+						console.log("****" );
 						editor.execute( new SetSceneCommand( editor, result ) );
 
 					} else {
-
+						console.log("$$$$" );
 						editor.execute( new AddObjectCommand( editor, result ) );
 
 					}

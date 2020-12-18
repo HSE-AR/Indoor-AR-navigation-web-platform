@@ -23,11 +23,11 @@ namespace Gltf_file_sharing.Core.Repositories
             _models= database.GetCollection<Model>(settings.ModelsCollectionName);
         }
 
-        public async Task<ICollection<ModelDto>> Get() =>
-             ModelConverter.Convert(await _models.Find(m => true).ToListAsync());
+        public async Task<ICollection<ModelDto>> Get()
+            => ModelConverter.Convert(await _models.Find(m => true).ToListAsync());
 
-        public async Task<ModelDto> Get(string id) =>
-            ModelConverter.Convert(await _models.Find(m => m.Id == id).FirstOrDefaultAsync());
+        public async Task<ModelDto> Get(string id) 
+            => ModelConverter.Convert(await _models.Find(m => m.Id == id).FirstOrDefaultAsync());
 
 
         public async Task<Model> Create(ModelDto modelDto)
@@ -42,13 +42,13 @@ namespace Gltf_file_sharing.Core.Repositories
             return model;
         }
 
-        public async Task Update(string id, Model modelIn) =>
-          await  _models.ReplaceOneAsync(m => m.Id == id, modelIn);
+        public async Task Update(string id, Model modelIn) 
+            => await  _models.ReplaceOneAsync(m => m.Id == id, modelIn);
 
-        public void Remove(Model modelIn) =>
-            _models.DeleteOne(model => model.Id == modelIn.Id);
+        public void Remove(Model modelIn) 
+            => _models.DeleteOne(model => model.Id == modelIn.Id);
 
-        public void Remove(string id) =>
-            _models.DeleteOne(model => model.Id == id);
+        public void Remove(string id) 
+            => _models.DeleteOne(model => model.Id == id);
     }
 }
