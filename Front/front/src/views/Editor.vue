@@ -5,9 +5,7 @@
 </template>
 
 
-
 <script>
-// @ is an alias to /src
 
 import { THREE,Editor,Viewport,Toolbar,Player,Sidebar,Menubar,Resizer} from '../main.js'
 import { Loader } from '../../public/threejs/build/three.module.js';
@@ -46,7 +44,7 @@ export default {
     this.editor = new Editor();
     window.editor = this.editor; // Expose editor to Console
 	window.THREE = THREE; // Expose THREE to APP Scripts and Console
-	await this.LoadSceneFromBack();
+
 
     
     this.viewport = new Viewport( this.editor );
@@ -161,7 +159,9 @@ export default {
 			this.isLoadingFromHash = true;
 
 		}
-    }  */
+	}  */
+		await this.LoadSceneFromBack();
+		
   },
 
   destroyed(){
@@ -170,50 +170,33 @@ export default {
 
   methods:{
 
-      onWindowResize(){
-          this.editor.signals.windowResize.dispatch();
-	  },
-	  
-	 async LoadSceneFromBack(){
-		 	//this.editor.storage.clear();
+	onWindowResize()
+	{
+        this.editor.signals.windowResize.dispatch();
+	},
+	
+	async LoadSceneFromBack()
+	{
 		var port = 'http://localhost:5555'
-      //var config ={headers:{ Authorization :"Bearer "+ this.state.AllAboutToken.accessToken}}
-      /*const data={
+      	//var config ={headers:{ Authorization :"Bearer "+ this.state.AllAboutToken.accessToken}}
+      	/*const data={
         'itemId':item.id,
         'star':item.top,
         'userId':this.state.user.sub}*/
-      await axios.get(port +'/api/test').then(response =>{
-			  console.log(response)
-			  var scene = new THREE.Scene();
+      	await axios.get(port +'/api/test').then(response =>{
+			console.log(response)
+			this.editor.idFromBack = response.data.id;
+			this.editor.loader.MyLoader(response.data.scene);
 
-			  this.editor.loader.MyLoader(response.data);
-			  
-			 // this.editor.select( );
+			this.editor.select( null );
+        })
+	},
 
-			   //console.log(this.editor.toJSON())
+	/*GetModificationsFromHistory()
+	{
+		//console.log(this.editor.history)
 
-				// var dataa;
-				// dataa = JSON.parse( response.data );
-
-			   
-
-
-			   
-
-
-
-			  //this.editor.setScene(response.data)
-				//var a = this.editor.toJSON();
-				//a["scene"]= response.data;
-			  	//this.editor.storage.add(this.editor.toJSON())
-				
-			  //editor.storage.set( response.data);
-			 
-
-	
-
-          })
-		},
+	}*/
 
 	   
 

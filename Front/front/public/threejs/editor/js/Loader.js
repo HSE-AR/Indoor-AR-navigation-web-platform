@@ -43,8 +43,9 @@ function Loader( editor ) {
 		} );
 
 	};
-	
-	this.MyLoader  =function (data) {
+
+	//кастомный метод с загрузкой json в сцену
+	this.MyLoader  = function (data) { 
 		
 
 		if ( data.metadata === undefined ) { // 2.0
@@ -73,7 +74,6 @@ function Loader( editor ) {
 				var result = loader.parse( data );
 
 				var mesh = new THREE.Mesh( result );
-				console.log("999999" );
 				editor.execute( new AddObjectCommand( editor, mesh ) );
 
 				break;
@@ -92,11 +92,9 @@ function Loader( editor ) {
 				loader.parse( data, function ( result ) {
 
 					if ( result.isScene ) {
-						console.log("****" );
 						editor.execute( new SetSceneCommand( editor, result ) );
 
 					} else {
-						console.log("$$$$" );
 						editor.execute( new AddObjectCommand( editor, result ) );
 
 					}
@@ -132,11 +130,11 @@ function Loader( editor ) {
 				if ( file ) {
 
 					console.log( 'Loading', url );
-
+					console.log( '12323123' );
 					return URL.createObjectURL( file );
 
 				}
-
+				console.log( '12323123!' );
 				return url;
 
 			} );
@@ -144,7 +142,7 @@ function Loader( editor ) {
 			manager.addHandler( /\.tga$/i, new TGALoader() );
 
 			for ( var i = 0; i < files.length; i ++ ) {
-				console.log( '12323123' );
+			
 
 				scope.loadFile( files[ i ], manager );
 

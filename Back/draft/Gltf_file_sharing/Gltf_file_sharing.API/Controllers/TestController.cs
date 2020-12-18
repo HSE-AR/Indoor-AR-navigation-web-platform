@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Gltf_file_sharing.Data.Converters;
 
 namespace Gltf_file_sharing.API.Controllers
 {
@@ -137,18 +138,35 @@ namespace Gltf_file_sharing.API.Controllers
         }
 
         [HttpGet]
-        public async Task<string> GetTestString()
+        public async Task<ModelDto> GetStartModels()
         {
             var modelsBson = _testDatabase.GetCollection<Model>("models");
             
             var filter = new BsonDocument();
             var cursor = await modelsBson.FindAsync(filter);
-            cursor.MoveNextAsync();
+            await cursor.MoveNextAsync();
 
-            var people = cursor.Current;
+            var model = cursor.Current;
             
-            return people.First().Scene.ToJson();
+            return  ModelConverter.Convert(model.First());
         }
+        
+        /*[HttpPost("my")]
+        public async Task<ModelDto> ModificationHandler([FromBody] ModificationDto modificationDto)
+        {
+            var modelsBson = _testDatabase.GetCollection<Model>("models");
+            
+            var filter = Builders<Model>.Filter.Eq("_id", ObjectId.Parse(modificationDto.ModelId));
+            
+            var cursor = await modelsBson.FindAsync(filter);
+            await cursor.MoveNextAsync();
+
+            var model = cursor.Current;
+            
+            return  ModelConverter.Convert(model.First());
+        }*/
+        
+        
         
         //[HttpGet]
         //public ActionResult<string> Get()
