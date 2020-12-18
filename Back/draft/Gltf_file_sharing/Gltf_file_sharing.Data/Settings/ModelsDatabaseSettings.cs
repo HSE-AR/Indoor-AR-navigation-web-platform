@@ -9,6 +9,7 @@ namespace Gltf_file_sharing.Data.Settings
         public string ModelsCollectionName { get; set; }
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
+        public string ModificationsCollectionName { get; set; }
     }
 
 
@@ -17,5 +18,6 @@ namespace Gltf_file_sharing.Data.Settings
         string ModelsCollectionName { get; set; }
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }
+        string ModificationsCollectionName { get; set; }
     }
 }

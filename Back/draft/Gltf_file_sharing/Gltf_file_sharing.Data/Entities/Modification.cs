@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using Gltf_file_sharing.Data.DTO;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,16 @@ namespace Gltf_file_sharing.Data.Entities
         public BsonDocument Object { get; set; }
 
         public string ModelId { get; set; }
+
+        public Modification(ModificationDto modificationDto)
+        {
+            Id = modificationDto.Id;
+            EditedAtUtc = modificationDto.EditedAtUtc;
+            Object = BsonDocument.Parse(modificationDto.Object.ToString());
+            ModelId = modificationDto.ModelId;
+            ObjectType = modificationDto.ObjectType;
+            Type = modificationDto.Type;
+        }
     }
 
 

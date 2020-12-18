@@ -24,13 +24,13 @@ namespace Gltf_file_sharing.API.Controllers
 
             [HttpGet]
             public async Task<ActionResult<ICollection<ModelDto>>> Get() =>
-                 new JsonResult(await _modelsRepository.Get());
+                 new JsonResult(await _modelsRepository.GetAsync());
  
 
             [HttpGet("{id:length(24)}", Name = "GetModel")]
             public async Task<ActionResult<ModelDto>> Get(string id)
             {
-                var model = await _modelsRepository.Get(id);
+                var model = await _modelsRepository.GetAsync(id);
 
                 if (model == null)
                 {
@@ -41,22 +41,22 @@ namespace Gltf_file_sharing.API.Controllers
             }
 
             [HttpPost]
-            public async Task<ActionResult<Model>> Create([FromBody]ModelDto modelDto)
+            public async Task<ActionResult<ModelDto>> Create([FromBody]ModelDto modelDto)
             {
-               return await _modelsRepository.Create(modelDto);
+               return await _modelsRepository.CreateAsync(modelDto);
             }
 
             [HttpPut("{id:length(24)}")]
             public async Task<IActionResult> Update(string id, Model modelIn)
             {
-                var model = _modelsRepository.Get(id);
+                var model = _modelsRepository.GetAsync(id);
 
                 if (model == null)
                 {
                     return NotFound();
                 }
 
-                await _modelsRepository.Update(id, modelIn);
+                await _modelsRepository.UpdateAsync(id, modelIn);
 
                 return NoContent();
             }
@@ -64,14 +64,14 @@ namespace Gltf_file_sharing.API.Controllers
             [HttpDelete("{id:length(24)}")]
             public async Task<IActionResult> Delete(string id)
             {
-                var model =  await _modelsRepository.Get(id);
+                var model =  await _modelsRepository.GetAsync(id);
 
                 if (model == null)
                 {
                     return NotFound();
                 }
 
-                _modelsRepository.Remove(model.Id);
+                await _modelsRepository.RemoveAsync(model.Id);
 
                 return NoContent();
             }

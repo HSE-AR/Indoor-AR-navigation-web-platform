@@ -70,6 +70,7 @@ namespace Gltf_file_sharing.API
         private static void AddRepositories(IServiceCollection services)
         {
             services.AddTransient<IGltfFileRepository, GltfFileRepository>();
+            services.AddSingleton<ModificationRepository>();
             services.AddSingleton<ModelsRepository>();
         }
 
@@ -80,6 +81,7 @@ namespace Gltf_file_sharing.API
             services.AddSingleton<IModelsDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<ModelsDatabaseSettings>>().Value);
             services.AddTransient<IStorageService, StorageService>();
+            services.AddTransient<IModificationService, ModificationService>();
         }
 
         private static void AddCorsConfiguration(IServiceCollection services) =>

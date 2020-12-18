@@ -74,7 +74,7 @@ namespace Gltf_file_sharing.API.Controllers
                     var ind = names.IndexOf(update);
                     names[ind] = BsonDocument.Parse(modificationDto.Object.ToString());
                     model["Scene"][name] = names;
-                    _models.FindOneAndUpdate(filter, model);
+                    _models.UpdateOne(filter, model);
                 }
 
                 if (modificationDto.Type == ModificationTypes.Delete)
@@ -86,7 +86,11 @@ namespace Gltf_file_sharing.API.Controllers
                     _models.FindOneAndUpdate(filter, model);
                 }
             }
-
+            
+            //при  ObjectType == ObjectChildren добавляем или изменяем объект в childrens, 
+            //при  ObjectType == Object изменяем свойства Object, Add и Delete недоступен
+            //childrens при этом не передаём, чтобы много памяти не тратить
+            //более глубокую вложенность пока не рассматриваем
            if (name == "object")
             {
                 if (modificationDto.Type == ModificationTypes.Delete || modificationDto.Type == ModificationTypes.Add)
@@ -125,10 +129,9 @@ namespace Gltf_file_sharing.API.Controllers
                 }
             }
 
-            //при  ObjectType == ObjectChildren добавляем или изменяем объект в childrens, 
-            //при  ObjectType == Object изменяем свойства Object, Add и Delete недоступен
-            //childrens при этом не передаём, чтобы много памяти не тратить
-            //более глубокую вложенность пока не рассматриваем
+           //создать репозиторий ModificationRepository
+            //создать ModificationService для фукнций внесения измениений
+            //создать новый контроллер
             
             return new JsonResult("kek");
         }

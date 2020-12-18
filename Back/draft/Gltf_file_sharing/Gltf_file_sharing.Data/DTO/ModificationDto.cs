@@ -1,5 +1,6 @@
 ﻿using Gltf_file_sharing.Data.Entities;
 using Microsoft.VisualBasic.CompilerServices;
+using MongoDB.Bson;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -20,5 +21,20 @@ namespace Gltf_file_sharing.Data.DTO
         public JObject Object { get; set; }
 
         public string ModelId { get; set; }
+
+        public ModificationDto()
+        {
+
+        }
+
+        public ModificationDto(Modification modification)
+        {
+            Id = modification.Id;
+            EditedAtUtc = modification.EditedAtUtc;
+            Object = JObject.Parse(modification.Object.ToJson());
+            ModelId = modification.ModelId;
+            ObjectType = modification.ObjectType;
+            Type = modification.Type;
+        }
     }
 }

@@ -17,20 +17,22 @@ namespace Gltf_file_sharing.Core.Repositories
 
         public ModelsRepository(IModelsDatabaseSettings settings)
         {
+            //регистрацию бд вынести в отдельный класс MongoContext
+            //пример: https://metanit.com/nosql/mongodb/4.12.php
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
 
             _models= database.GetCollection<Model>(settings.ModelsCollectionName);
         }
 
-        public async Task<ICollection<ModelDto>> Get() =>
+        public async Task<ICollection<ModelDto>> GetAsync() =>
              ModelConverter.Convert(await _models.Find(m => true).ToListAsync());
 
-        public async Task<ModelDto> Get(string id) =>
+        public async Task<ModelDto> GetAsync(string id) =>
             ModelConverter.Convert(await _models.Find(m => m.Id == id).FirstOrDefaultAsync());
 
 
-        public async Task<Model> Create(ModelDto modelDto)
+        public async Task<ModelDto> CreateAsync(ModelDto modelDto)
         {
             Model model = new Model
             {
@@ -39,16 +41,16 @@ namespace Gltf_file_sharing.Core.Repositories
                 CreatedAtUtc = DateTime.Now
             };
             await _models.InsertOneAsync(model);
-            return model;
+            return ModelConverter.Convert(model);
         }
 
-        public async Task Update(string id, Model modelIn) =>
+        public async Task<ReplaceOneResult> UpdateAsync(string id, Model modelIn) =>
           await  _models.ReplaceOneAsync(m => m.Id == id, modelIn);
 
-        public void Remove(Model modelIn) =>
-            _models.DeleteOne(model => model.Id == modelIn.Id);
+        public async Task<DeleteResult> RemoveAsync(ModelDto modelIn) =>
+            await _models.DeleteOneAsync(model => model.Id == modelIn.Id);
 
-        public void Remove(string id) =>
-            _models.DeleteOne(model => model.Id == id);
+        public async Task<DeleteResult> RemoveAsync(string id) =>
+            await _models.DeleteOneAsync(model => model.Id == id);
     }
 }
