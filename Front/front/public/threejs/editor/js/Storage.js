@@ -1,6 +1,4 @@
 function Storage() {
-	console.log("Storage я закомментил")
-	/*
 
 	var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 
@@ -94,7 +92,7 @@ function Storage() {
 		}
 
 	};
-*/
+
 }
 
 export { Storage };

@@ -18,7 +18,7 @@ namespace Gltf_file_sharing.Data.Entities
         public DateTime CreatedAtUtc { get; set; }
 
         public BsonDocument Scene { get; set; }
-        
+
+
     }
-    
 }

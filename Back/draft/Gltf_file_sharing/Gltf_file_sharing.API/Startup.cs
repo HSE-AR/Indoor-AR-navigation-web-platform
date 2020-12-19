@@ -59,13 +59,6 @@ namespace Gltf_file_sharing.API
             app.UseRouting();
 
             app.UseAuthorization();
-            
-            app.UseCors(x => x
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .SetIsOriginAllowed(_ => true)
-                    .AllowCredentials()
-            );
 
             app.UseEndpoints(endpoints =>
             {

@@ -1,9 +1,8 @@
-// import { UIPanel, UIRow } from './libs/ui.js';
+import { UIPanel, UIRow } from './libs/ui.js';
 
 function MenubarView( editor ) {
 
-	console.log("MenubarView нам не нужен")
-	/*var container = new UIPanel();
+	var container = new UIPanel();
 	container.setClass( 'menu' );
 
 	var title = new UIPanel();
@@ -27,7 +26,7 @@ function MenubarView( editor ) {
 	} );
 	options.add( option );
 
-	return container;*/
+	return container;
 
 }
 

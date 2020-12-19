@@ -21,6 +21,48 @@ function SidebarObject( editor ) {
 	container.setPaddingTop( '20px' );
 	container.setDisplay( 'none' );
 
+	// Actions
+
+	/*
+	var objectActions = new UI.Select().setPosition( 'absolute' ).setRight( '8px' ).setFontSize( '11px' );
+	objectActions.setOptions( {
+
+		'Actions': 'Actions',
+		'Reset Position': 'Reset Position',
+		'Reset Rotation': 'Reset Rotation',
+		'Reset Scale': 'Reset Scale'
+
+	} );
+	objectActions.onClick( function ( event ) {
+
+		event.stopPropagation(); // Avoid panel collapsing
+
+	} );
+	objectActions.onChange( function ( event ) {
+
+		var object = editor.selected;
+
+		switch ( this.getValue() ) {
+
+			case 'Reset Position':
+				editor.execute( new SetPositionCommand( editor, object, new Vector3( 0, 0, 0 ) ) );
+				break;
+
+			case 'Reset Rotation':
+				editor.execute( new SetRotationCommand( editor, object, new Euler( 0, 0, 0 ) ) );
+				break;
+
+			case 'Reset Scale':
+				editor.execute( new SetScaleCommand( editor, object, new Vector3( 1, 1, 1 ) ) );
+				break;
+
+		}
+
+		this.setValue( 'Actions' );
+
+	} );
+	container.addStatic( objectActions );
+	*/
 
 	// type
 

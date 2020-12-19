@@ -22,15 +22,3 @@ C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf
 C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.dll
 C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.pdb
 C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.csproj.CoreCompileInputs.cache
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Core.deps.json
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Core.dll
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Core.pdb
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Data.dll
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Data.pdb
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.csprojAssemblyReference.cache
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.AssemblyInfoInputs.cache
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.AssemblyInfo.cs
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.csproj.CoreCompileInputs.cache
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.csproj.CopyComplete
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.dll
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Core\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Core.pdb

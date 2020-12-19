@@ -16,12 +16,3 @@ C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf
 C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Data.dll
 C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Data.pdb
 C:\Users\X1CARBON\source\repos\Indoor-AR-navigation-web-platform\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Data.csproj.CoreCompileInputs.cache
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Data.deps.json
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Data.dll
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\bin\Debug\netcoreapp3.1\Gltf_file_sharing.Data.pdb
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Data.csprojAssemblyReference.cache
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Data.AssemblyInfoInputs.cache
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Data.AssemblyInfo.cs
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Data.csproj.CoreCompileInputs.cache
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Data.dll
-C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.Data\obj\Debug\netcoreapp3.1\Gltf_file_sharing.Data.pdb

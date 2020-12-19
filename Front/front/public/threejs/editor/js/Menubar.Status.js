@@ -1,12 +1,11 @@
-// import * as THREE from '../../build/three.module.js';
+import * as THREE from '../../build/three.module.js';
 
-// import { UIPanel, UIText } from './libs/ui.js';
-// import { UIBoolean } from './libs/ui.three.js';
+import { UIPanel, UIText } from './libs/ui.js';
+import { UIBoolean } from './libs/ui.three.js';
 
 function MenubarStatus( editor ) {
 
-	console.log("status нам не нужен")
-	/*var strings = editor.strings;
+	var strings = editor.strings;
 
 	var container = new UIPanel();
 	container.setClass( 'menu right' );
@@ -45,7 +44,7 @@ function MenubarStatus( editor ) {
 	version.setOpacity( 0.5 );
 	container.add( version );
 
-	return container;*/
+	return container;
 
 }
 

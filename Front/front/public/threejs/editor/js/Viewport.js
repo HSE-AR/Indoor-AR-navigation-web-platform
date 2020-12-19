@@ -6,8 +6,8 @@ import { UIPanel } from './libs/ui.js';
 
 import { EditorControls } from './EditorControls.js';
 
-// import { ViewportCamera } from './Viewport.Camera.js';
-// import { ViewportInfo } from './Viewport.Info.js';
+import { ViewportCamera } from './Viewport.Camera.js';
+import { ViewportInfo } from './Viewport.Info.js';
 import { ViewHelper } from './Viewport.ViewHelper.js';
 
 import { SetPositionCommand } from './commands/SetPositionCommand.js';
@@ -22,8 +22,8 @@ function Viewport( editor ) {
 	container.setId( 'viewport' );
 	container.setPosition( 'absolute' );
 
-	// container.add( new ViewportCamera( editor ) );
-	// container.add( new ViewportInfo( editor ) );
+	container.add( new ViewportCamera( editor ) );
+	container.add( new ViewportInfo( editor ) );
 
 	//
 
@@ -636,28 +636,28 @@ function Viewport( editor ) {
 
 	} );
 
-	// signals.viewportCameraChanged.add( function () {
+	signals.viewportCameraChanged.add( function () {
 
-	// 	var viewportCamera = editor.viewportCamera;
+		var viewportCamera = editor.viewportCamera;
 
-	// 	if ( viewportCamera.isPerspectiveCamera ) {
+		if ( viewportCamera.isPerspectiveCamera ) {
 
-	// 		viewportCamera.aspect = editor.camera.aspect;
-	// 		viewportCamera.projectionMatrix.copy( editor.camera.projectionMatrix );
+			viewportCamera.aspect = editor.camera.aspect;
+			viewportCamera.projectionMatrix.copy( editor.camera.projectionMatrix );
 
-	// 	} else if ( viewportCamera.isOrthographicCamera ) {
+		} else if ( viewportCamera.isOrthographicCamera ) {
 
-	// 		// TODO
+			// TODO
 
-	// 	}
+		}
 
-	// 	// disable EditorControls when setting a user camera
+		// disable EditorControls when setting a user camera
 
-	// 	controls.enabled = ( viewportCamera === editor.camera );
+		controls.enabled = ( viewportCamera === editor.camera );
 
-	// 	render();
+		render();
 
-	// } );
+	} );
 
 	//
 
