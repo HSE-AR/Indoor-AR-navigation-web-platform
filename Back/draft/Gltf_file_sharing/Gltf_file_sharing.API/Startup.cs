@@ -89,7 +89,8 @@ namespace Gltf_file_sharing.API
                options.AddPolicy("AllowAll", builder =>
                builder.AllowAnyOrigin()
                       .AllowAnyMethod()
-                      .AllowAnyHeader());
+                      .AllowAnyHeader()
+                      .AllowCredentials());
            });
 
         private void AddSettings(IServiceCollection services)

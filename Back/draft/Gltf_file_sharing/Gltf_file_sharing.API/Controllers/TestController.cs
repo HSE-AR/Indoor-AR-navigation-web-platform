@@ -143,7 +143,7 @@ namespace Gltf_file_sharing.API.Controllers
             
             var filter = new BsonDocument();
             var cursor = await modelsBson.FindAsync(filter);
-            cursor.MoveNextAsync();
+            await cursor.MoveNextAsync();
 
             var people = cursor.Current;
             
