@@ -1,4 +1,5 @@
-﻿using Gltf_file_sharing.Data.DTO;
+﻿using Gltf_file_sharing.Data.Converters;
+using Gltf_file_sharing.Data.DTO;
 using Gltf_file_sharing.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
@@ -18,11 +19,13 @@ namespace Gltf_file_sharing.API.Controllers
         private readonly MongoClient _client;
         private readonly IMongoDatabase _database;
         private readonly IMongoCollection<BsonDocument> _models;
+        private readonly IMongoDatabase _testDatabase;
 
         public TestController()
         {
             _client = new MongoClient("mongodb://localhost:27017");
             _database = _client.GetDatabase("ModelsDb");
+            _testDatabase = _client.GetDatabase("test");
             _models = _database.GetCollection<BsonDocument>("Models");
         }
         [HttpPost]
@@ -135,6 +138,23 @@ namespace Gltf_file_sharing.API.Controllers
             
             return new JsonResult("kek");
         }
+
+
+
+        [HttpGet]
+        public async Task<ModelDto> GetStartModels()
+        {
+            var modelsBson = _testDatabase.GetCollection<Model>("models");
+
+            var filter = new BsonDocument();
+            var cursor = await modelsBson.FindAsync(filter);
+            await cursor.MoveNextAsync();
+
+            var model = cursor.Current;
+
+            return ModelConverter.Convert(model.First());
+        }
+
         //[HttpGet]
         //public ActionResult<string> Get()
         //{
