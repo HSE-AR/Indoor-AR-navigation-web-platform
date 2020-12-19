@@ -5,12 +5,12 @@
 </template>
 
 
-
 <script>
-// @ is an alias to /src
 
 import { THREE,Editor,Viewport,Toolbar,Player,Sidebar,Menubar,Resizer} from '../main.js'
-import Blockly from "blockly" 
+import { Loader } from '../../public/threejs/build/three.module.js';
+
+import axios from 'axios'
 
 Number.prototype.format = function () {
 	return this.toString().replace( /(\d)(?=(\d{3})+(?!\d))/g, "$1," );
@@ -36,17 +36,16 @@ export default {
       }
   },
 
-  created(){
-
-
+  async created(){
+	
     window.URL = window.URL || window.webkitURL;
     window.BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder;
     
-    
-
     this.editor = new Editor();
     window.editor = this.editor; // Expose editor to Console
-    window.THREE = THREE; // Expose THREE to APP Scripts and Console
+	window.THREE = THREE; // Expose THREE to APP Scripts and Console
+
+
     
     this.viewport = new Viewport( this.editor );
     document.body.appendChild( this.viewport.dom );
@@ -62,9 +61,11 @@ export default {
 	document.body.appendChild( this.menubar.dom );
 
     this.resizer = new Resizer( this.editor );
-    document.body.appendChild( this.resizer.dom );
+	document.body.appendChild( this.resizer.dom );
+	
 
-    this.editor.storage.init( function () {
+
+    /*this.editor.storage.init( function () {
 
 		editor.storage.get( function ( state ) {
             if ( isLoadingFromHash ) 
@@ -84,9 +85,11 @@ export default {
 
 		function saveState() {
 
-            console.log(editor.history)
+			
+			console.log(editor.toJSON()["scene"] = {"test" : "qwerty"})
+			console.log(editor.toJSON()["scene"])
 
-					if ( editor.config.getKey( 'autosave' ) === false ) {
+					/*( editor.config.getKey( 'autosave' ) === false ) {
 						return;
 					}
 					clearTimeout( timeout );
@@ -96,9 +99,9 @@ export default {
 							editor.storage.set( editor.toJSON() );
 							editor.signals.savingFinished.dispatch();
 						}, 100 );
-					}, 1000 );
+					}, 1000 );*/
 
-		}
+		/*}
 
 		var signals = editor.signals;
 
@@ -106,13 +109,13 @@ export default {
 		signals.objectAdded.add( saveState );
 		signals.objectChanged.add( saveState );
 		signals.objectRemoved.add( saveState );
-		signals.materialChanged.add( saveState );
+		//signals.materialChanged.add( saveState );
 		signals.sceneBackgroundChanged.add( saveState );
 		signals.sceneFogChanged.add( saveState );
 		signals.sceneGraphChanged.add( saveState );
-		signals.scriptChanged.add( saveState );
+		//signals.scriptChanged.add( saveState );
 		signals.historyChanged.add( saveState );
-	} );
+	} );*/
     
     document.addEventListener( 'dragover', function ( event ) {
 		event.preventDefault();
@@ -140,7 +143,7 @@ export default {
     var isLoadingFromHash = false;
 	this.hash = window.location.hash;
 
-	if ( this.hash.substr( 1, 5 ) === 'file=' ) {
+	/*if ( this.hash.substr( 1, 5 ) === 'file=' ) {
 
 		var file = hash.substr( 6 );
 
@@ -156,7 +159,9 @@ export default {
 			this.isLoadingFromHash = true;
 
 		}
-    }  
+	}  */
+		await this.LoadSceneFromBack();
+		
   },
 
   destroyed(){
@@ -165,9 +170,39 @@ export default {
 
   methods:{
 
-      onWindowResize(){
-          this.editor.signals.windowResize.dispatch();
-      }
+	onWindowResize()
+	{
+        this.editor.signals.windowResize.dispatch();
+	},
+	
+	async LoadSceneFromBack()
+	{
+		var port = 'http://localhost:5555'
+      	//var config ={headers:{ Authorization :"Bearer "+ this.state.AllAboutToken.accessToken}}
+      	/*const data={
+        'itemId':item.id,
+        'star':item.top,
+        'userId':this.state.user.sub}*/
+      	await axios.get(port +'/api/test').then(response =>{
+			console.log(response)
+			this.editor.idFromBack = response.data.id;
+			this.editor.loader.MyLoader(response.data.scene);
+
+			this.editor.select( null );
+        })
+	},
+
+	/*GetModificationsFromHistory()
+	{
+		//console.log(this.editor.history)
+
+	}*/
+
+	   
+
+	
+	
+	  
 
   }
 

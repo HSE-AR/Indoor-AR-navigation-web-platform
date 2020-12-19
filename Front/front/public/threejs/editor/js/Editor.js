@@ -85,6 +85,8 @@ function Editor() {
 
 	};
 
+	this.idFromBack = null; 
+
 	this.config = new Config();
 	this.history = new _History( this );
 	this.storage = new _Storage();

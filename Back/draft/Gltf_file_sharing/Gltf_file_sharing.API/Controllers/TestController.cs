@@ -1,5 +1,4 @@
-﻿using Gltf_file_sharing.Data.Converters;
-using Gltf_file_sharing.Data.DTO;
+﻿using Gltf_file_sharing.Data.DTO;
 using Gltf_file_sharing.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
@@ -18,8 +17,8 @@ namespace Gltf_file_sharing.API.Controllers
        
         private readonly MongoClient _client;
         private readonly IMongoDatabase _database;
-        private readonly IMongoCollection<BsonDocument> _models;
         private readonly IMongoDatabase _testDatabase;
+        private readonly IMongoCollection<BsonDocument> _models;
 
         public TestController()
         {
@@ -28,6 +27,7 @@ namespace Gltf_file_sharing.API.Controllers
             _testDatabase = _client.GetDatabase("test");
             _models = _database.GetCollection<BsonDocument>("Models");
         }
+        
         [HttpPost]
         public ActionResult Modification([FromBody] ModificationDto modificationDto)
         {
@@ -77,7 +77,7 @@ namespace Gltf_file_sharing.API.Controllers
                     var ind = names.IndexOf(update);
                     names[ind] = BsonDocument.Parse(modificationDto.Object.ToString());
                     model["Scene"][name] = names;
-                    _models.UpdateOne(filter, model);
+                    _models.FindOneAndUpdate(filter, model);
                 }
 
                 if (modificationDto.Type == ModificationTypes.Delete)
@@ -89,11 +89,7 @@ namespace Gltf_file_sharing.API.Controllers
                     _models.FindOneAndUpdate(filter, model);
                 }
             }
-            
-            //при  ObjectType == ObjectChildren добавляем или изменяем объект в childrens, 
-            //при  ObjectType == Object изменяем свойства Object, Add и Delete недоступен
-            //childrens при этом не передаём, чтобы много памяти не тратить
-            //более глубокую вложенность пока не рассматриваем
+
            if (name == "object")
             {
                 if (modificationDto.Type == ModificationTypes.Delete || modificationDto.Type == ModificationTypes.Add)
@@ -132,29 +128,28 @@ namespace Gltf_file_sharing.API.Controllers
                 }
             }
 
-           //создать репозиторий ModificationRepository
-            //создать ModificationService для фукнций внесения измениений
-            //создать новый контроллер
+            //при  ObjectType == ObjectChildren добавляем или изменяем объект в childrens, 
+            //при  ObjectType == Object изменяем свойства Object, Add и Delete недоступен
+            //childrens при этом не передаём, чтобы много памяти не тратить
+            //более глубокую вложенность пока не рассматриваем
             
             return new JsonResult("kek");
         }
 
-
-
         [HttpGet]
-        public async Task<ModelDto> GetStartModels()
+        public async Task<string> GetTestString()
         {
             var modelsBson = _testDatabase.GetCollection<Model>("models");
-
+            
             var filter = new BsonDocument();
             var cursor = await modelsBson.FindAsync(filter);
-            await cursor.MoveNextAsync();
+            cursor.MoveNextAsync();
 
-            var model = cursor.Current;
-
-            return ModelConverter.Convert(model.First());
+            var people = cursor.Current;
+            
+            return people.First().Scene.ToJson();
         }
-
+        
         //[HttpGet]
         //public ActionResult<string> Get()
         //{
