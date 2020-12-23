@@ -29,6 +29,15 @@ namespace Gltf_file_sharing.Core.Services
         public async Task<IEnumerable<ModificationDto>> GetAsync() =>
             (await _modificationRepository.GetAsync()).Select(x => new ModificationDto(x));
 
+        public async Task<bool> ModifyModels(IEnumerable<ModificationDto> modificationDtos)
+        {
+            bool result = true;
+            foreach (var moddto in modificationDtos)
+                result &= await ModifyModel(moddto);
+
+            return result;
+        }
+
         public async Task<bool> ModifyModel(ModificationDto modificationDto)
         {
             Modification mod = new Modification(modificationDto);

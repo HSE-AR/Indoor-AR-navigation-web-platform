@@ -10,6 +10,8 @@ namespace Gltf_file_sharing.Core.Services
     {
         Task<bool> ModifyModel(ModificationDto modificationDto);
 
+        Task<bool> ModifyModels(IEnumerable<ModificationDto> modificationDtos);
+
         Task<IEnumerable<ModificationDto>> GetAsync();
     }
 

@@ -48,5 +48,18 @@ namespace Gltf_file_sharing.API.Controllers
                 return BadRequest(ex);
             }
         }
+
+        [HttpPost("list")]
+        public async Task<ActionResult<bool>> SetModifications([FromBody] IEnumerable<ModificationDto> modificationDtos)
+        {
+            try
+            {
+                return await _modificationService.ModifyModels(modificationDtos);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
     }
 }
