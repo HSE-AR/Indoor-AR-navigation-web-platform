@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Gltf_file_sharing.Core.Databases;
 using Gltf_file_sharing.Core.EF;
 using Gltf_file_sharing.Core.Repositories;
 using Gltf_file_sharing.Core.Services;
@@ -10,12 +7,10 @@ using Gltf_file_sharing.Data.Repositories;
 using Gltf_file_sharing.Data.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 namespace Gltf_file_sharing.API
@@ -106,6 +101,8 @@ namespace Gltf_file_sharing.API
 
             services.AddDbContext<GltfContext>(options => options.UseSqlite(connection,
                    b => b.MigrationsAssembly("Gltf_file_sharing.API")));
+
+            services.AddSingleton<MongoContext>();
 
         }
 

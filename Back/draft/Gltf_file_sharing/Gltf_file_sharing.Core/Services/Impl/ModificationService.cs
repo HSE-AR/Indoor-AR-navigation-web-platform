@@ -1,4 +1,5 @@
-﻿using Gltf_file_sharing.Core.Repositories;
+﻿using Gltf_file_sharing.Core.Databases;
+using Gltf_file_sharing.Core.Repositories;
 using Gltf_file_sharing.Data.DTO;
 using Gltf_file_sharing.Data.Entities;
 using Gltf_file_sharing.Data.Settings;
@@ -17,17 +18,12 @@ namespace Gltf_file_sharing.Core.Services
         private readonly ModificationRepository _modificationRepository;
         //нужен прямой доступ к коллекции (а не к репозиторию), для экономии памяти и времени 
         private readonly IMongoCollection<BsonDocument> _models;
-        //обращение к бд и непосредственно к коллекции реализовать через MongoContext
 
-        public ModificationService(IModelsDatabaseSettings settings, ModificationRepository modRep)
+
+        public ModificationService(MongoContext context, ModificationRepository modRep)
         {
-            //регистрацию бд вынести в отдельный класс MongoContext
-            //пример: https://metanit.com/nosql/mongodb/4.12.php
-            var client = new MongoClient(settings.ConnectionString);
-            var database = client.GetDatabase(settings.DatabaseName);
-
-            _models = database.GetCollection<BsonDocument>(settings.ModelsCollectionName);
             _modificationRepository = modRep;
+            _models = context.ModelsAsBsonDocument;
         }
 
         public async Task<IEnumerable<ModificationDto>> GetAsync() =>

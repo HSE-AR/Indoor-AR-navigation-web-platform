@@ -1,12 +1,11 @@
-﻿using Gltf_file_sharing.Data.Converters;
+﻿using Gltf_file_sharing.Core.Databases;
+using Gltf_file_sharing.Data.Converters;
 using Gltf_file_sharing.Data.DTO;
 using Gltf_file_sharing.Data.Entities;
-using Gltf_file_sharing.Data.Settings;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Gltf_file_sharing.Core.Repositories
@@ -15,14 +14,9 @@ namespace Gltf_file_sharing.Core.Repositories
     {
         private readonly IMongoCollection<Model> _models;
 
-        public ModelsRepository(IModelsDatabaseSettings settings)
+        public ModelsRepository(MongoContext mongoContext)
         {
-            //регистрацию бд вынести в отдельный класс MongoContext
-            //пример: https://metanit.com/nosql/mongodb/4.12.php
-            var client = new MongoClient(settings.ConnectionString);
-            var database = client.GetDatabase(settings.DatabaseName);
-
-            _models= database.GetCollection<Model>(settings.ModelsCollectionName);
+            _models = mongoContext.Models;
         }
 
         public async Task<ICollection<ModelDto>> GetAsync() =>
