@@ -75,29 +75,23 @@ namespace Gltf_file_sharing.Core.Services
 
         private async Task<UpdateResult> AddElementsToModelAsync(FilterDefinition<BsonDocument> filter, Modification modification)
         {
-            var path = string.Empty;
-            //подумать как вынести это в отедльную фукнцию, чтобы было применимо ко всем функциям
-            switch (modification.ObjectType)
-            {
-                case ObjectTypes.Geometry:
-                    path = "Scene.geometries";
-                    break;
+            if  (modification.ObjectType == ObjectTypes.Object)
+            //сделать кастомное исключение, чтобы потом отлавливать в Middleware
+                throw new Exception("Недопустимая операция для данного элемента");
 
-                case ObjectTypes.Material:
-                    path = "Scene.materials";
-                    break;
 
-                case ObjectTypes.ObjectChildren:
-                    path = "Scene.object.children";
-                    break;
 
-                case ObjectTypes.Object:
-                    //сделать кастомное исключение, чтобы потом отлавливать в Middleware
-                    throw new Exception("Недопустимая операция для данного элемента");
+            if (modification.Material == null || modification.Geometry == null ||
+                                                        modification.ObjectChild == null)
 
-                default: break;
-            }
-            var update = Builders<BsonDocument>.Update.AddToSet(path, modification.Object);
+                throw new Exception("Для добавления объекта должны быть не нулевыми " +
+                                                       "поля Material, Geometry, ObjectChildren");
+
+            var update = Builders<BsonDocument>.Update
+                .AddToSet("Scene.object.children", modification.ObjectChild)
+                .AddToSet("Scene.materials", modification.Material)
+                .AddToSet("Scene.geometries", modification.Geometry);
+
             return await _models.UpdateOneAsync(filter, update);
         }
 
@@ -173,7 +167,7 @@ namespace Gltf_file_sharing.Core.Services
                 case ObjectTypes.Object:
                     return "object";
 
-                case ObjectTypes.ObjectChildren:
+                case ObjectTypes.ObjectChild:
                     return "children";
 
                 default:

@@ -20,6 +20,12 @@ namespace Gltf_file_sharing.Data.DTO
 
         public JObject Object { get; set; }
 
+        public JObject Geometry { get; set; }
+
+        public JObject Material { get; set; }
+
+        public JObject ObjectChild { get; set; }
+
         public string ModelId { get; set; }
 
         public ModificationDto()
@@ -31,7 +37,19 @@ namespace Gltf_file_sharing.Data.DTO
         {
             Id = modification.Id;
             EditedAtUtc = modification.EditedAtUtc;
-            Object = JObject.Parse(modification.Object.ToJson());
+
+            if (modification.Object != null)
+                Object = JObject.Parse(modification.Object.ToJson());
+
+            if (modification.Geometry != null)
+                Geometry = JObject.Parse(modification.Geometry.ToJson());
+
+            if (modification.ObjectChild != null)
+                ObjectChild = JObject.Parse(modification.ObjectChild.ToJson());
+
+            if (modification.Material != null)
+                Material = JObject.Parse(modification.Material.ToJson());
+
             ModelId = modification.ModelId;
             ObjectType = modification.ObjectType;
             Type = modification.Type;
