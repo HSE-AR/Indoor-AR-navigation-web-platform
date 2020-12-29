@@ -19,6 +19,8 @@ namespace Gltf_file_sharing.Data.Entities
 
         public ObjectTypes ObjectType { get; set; }
 
+        public ModificationTypes PropertyModificationType { get; set; }
+
         public BsonDocument Geometry { get; set; }
 
         public BsonDocument Material { get; set; }
@@ -48,6 +50,7 @@ namespace Gltf_file_sharing.Data.Entities
             ModelId = modificationDto.ModelId;
             ObjectType = modificationDto.ObjectType;
             Type = modificationDto.Type;
+            PropertyModificationType = modificationDto.PropertyModificationType;
         }
     }
 

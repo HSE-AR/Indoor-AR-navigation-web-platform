@@ -18,6 +18,8 @@ namespace Gltf_file_sharing.Data.DTO
 
         public ObjectTypes ObjectType { get; set; }
 
+        public ModificationTypes PropertyModificationType { get; set; }
+
         public JObject Object { get; set; }
 
         public JObject Geometry { get; set; }
@@ -53,6 +55,7 @@ namespace Gltf_file_sharing.Data.DTO
             ModelId = modification.ModelId;
             ObjectType = modification.ObjectType;
             Type = modification.Type;
+            PropertyModificationType = modification.PropertyModificationType;
         }
     }
 }
