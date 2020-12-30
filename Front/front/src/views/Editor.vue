@@ -32,7 +32,6 @@ export default {
           isLoadingFromHash: false,
           hash:null,
           
-
       }
   },
 
@@ -143,25 +142,7 @@ export default {
     var isLoadingFromHash = false;
 	this.hash = window.location.hash;
 
-	/*if ( this.hash.substr( 1, 5 ) === 'file=' ) {
-
-		var file = hash.substr( 6 );
-
-		if ( confirm( 'Any unsaved data will be lost. Are you sure?' ) ) {
-
-			var loader = new THREE.FileLoader();
-			loader.crossOrigin = '';
-			loader.load( file, function ( text ) {
-				editor.clear();
-				editor.fromJSON( JSON.parse( text ) );
-			} );
-
-			this.isLoadingFromHash = true;
-
-		}
-	}  */
-		await this.LoadSceneFromBack();
-		
+	await this.LoadSceneFromBack();	
   },
 
   destroyed(){
@@ -177,32 +158,14 @@ export default {
 	
 	async LoadSceneFromBack()
 	{
-		var port = 'http://localhost:5555'
-      	//var config ={headers:{ Authorization :"Bearer "+ this.state.AllAboutToken.accessToken}}
-      	/*const data={
-        'itemId':item.id,
-        'star':item.top,
-        'userId':this.state.user.sub}*/
-      	await axios.get(port +'/api/test').then(response =>{
+      	await axios.get(this.$store.state.port +'/api/models/'+this.$store.state.sceneTestId).then(response =>{
 			console.log(response)
 			this.editor.idFromBack = response.data.id;
 			this.editor.loader.MyLoader(response.data.scene);
 
 			this.editor.select( null );
         })
-	},
-
-	/*GetModificationsFromHistory()
-	{
-		//console.log(this.editor.history)
-
-	}*/
-
-	   
-
-	
-	
-	  
+	},  
 
   }
 

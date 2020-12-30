@@ -1,6 +1,8 @@
 <template>
   <div >
+    <h1> Админка</h1>
     <button @click="openEditor()">Открыть редактор</button>
+       <router-view/>
   </div>
 </template>
 
@@ -14,7 +16,7 @@ export default {
 
     openEditor(){
       console.log("редактор открыт")
-      router.push('/editor')
+      router.push('/adminka/editor')
     }
 
   }

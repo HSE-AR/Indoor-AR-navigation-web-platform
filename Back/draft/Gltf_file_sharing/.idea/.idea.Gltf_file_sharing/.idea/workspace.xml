@@ -5,18 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77aa2099-d128-4b0c-8986-3457377e2df2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Front/front/public/threejs/editor/js/Menubar.SaveAndExit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Front/front/public/threejs/editor/js/Storage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gltf_file_sharing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gltf_file_sharing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/Controllers/TestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/Controllers/TestController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Gltf_file_sharing/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Gltf_file_sharing/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Gltf_file_sharing/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Gltf_file_sharing/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/Gltf_file_sharing.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/Gltf_file_sharing.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.API.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.API.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.API.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.API.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Debug/netcoreapp3.1/Gltf_file_sharing.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Front/front/public/threejs/editor/js/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front/front/public/threejs/editor/js/Editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Front/front/public/threejs/editor/js/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front/front/public/threejs/editor/js/Loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Front/front/public/threejs/editor/js/Menubar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front/front/public/threejs/editor/js/Menubar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Gltf_file_sharing.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Gltf_file_sharing.API.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Gltf_file_sharing.API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/Gltf_file_sharing.API.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.API/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Core.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Core.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Gltf_file_sharing.Core.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Gltf_file_sharing.Core.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Gltf_file_sharing.Core.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/Gltf_file_sharing.Core.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Core/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/bin/Debug/netcoreapp3.1/Gltf_file_sharing.Data.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Debug/netcoreapp3.1/Gltf_file_sharing.Data.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Gltf_file_sharing.Data.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Gltf_file_sharing.Data.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Gltf_file_sharing.Data.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/Gltf_file_sharing.Data.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gltf_file_sharing.Data/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/json/initial_scene.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json/initial_scene.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front/front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front/front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front/front/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front/front/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front/front/public/threejs/editor/js/Toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front/front/public/threejs/editor/js/Toolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front/front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front/front/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Front/front/src/views/Editor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front/front/src/views/Editor.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front/front/src/views/Editor.vue.orig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front/front/src/views/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Front/front/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Front/front/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +89,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Gltf_file_sharing.API/Program.cs" />
         <option value="$PROJECT_DIR$/Gltf_file_sharing.Core/Repositories/ModelsRepository.cs" />
         <option value="$PROJECT_DIR$/Gltf_file_sharing.Data/Entities/Model.cs" />
-        <option value="$PROJECT_DIR$/Gltf_file_sharing.API/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/Gltf_file_sharing.API/Startup.cs" />
         <option value="$PROJECT_DIR$/Gltf_file_sharing.API/Controllers/TestController.cs" />
+        <option value="$PROJECT_DIR$/Gltf_file_sharing.Core/Databases/MongoContext.cs" />
+        <option value="$PROJECT_DIR$/Gltf_file_sharing.API/Program.cs" />
+        <option value="$PROJECT_DIR$/Gltf_file_sharing.API/Startup.cs" />
+        <option value="$PROJECT_DIR$/Gltf_file_sharing.API/Properties/launchSettings.json" />
       </list>
     </option>
   </component>
@@ -50,6 +108,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Gltf_file_sharing.API">
@@ -94,6 +153,9 @@
       <updated>1607721072133</updated>
       <workItem from="1607721389268" duration="1807000" />
       <workItem from="1608227623577" duration="14909000" />
+      <workItem from="1609190899417" duration="2602000" />
+      <workItem from="1609258521381" duration="5149000" />
+      <workItem from="1609264570322" duration="6097000" />
     </task>
     <servers />
   </component>
@@ -110,29 +172,41 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607723061333" />
-    <state width="1877" height="96" key="GridCell.Tab.0.bottom" timestamp="1608325737229">
+    <state width="1237" height="229" key="GridCell.Tab.0.bottom" timestamp="1609275134734">
+      <screen x="1920" y="0" width="1280" height="984" />
+    </state>
+    <state width="1877" height="467" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1609267873122" />
+    <state width="1237" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1609275134734" />
+    <state width="1877" height="96" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609226491109" />
+    <state width="1237" height="229" key="GridCell.Tab.0.center" timestamp="1609275134734">
+      <screen x="1920" y="0" width="1280" height="984" />
+    </state>
+    <state width="1877" height="467" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1609267873121" />
+    <state width="1237" height="229" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1609275134734" />
+    <state width="1877" height="96" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609226491109" />
+    <state width="1237" height="229" key="GridCell.Tab.0.left" timestamp="1609275134734">
+      <screen x="1920" y="0" width="1280" height="984" />
+    </state>
+    <state width="1877" height="467" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1609267873119" />
+    <state width="1237" height="229" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1609275134734" />
+    <state width="1877" height="96" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609226491109" />
+    <state width="1237" height="229" key="GridCell.Tab.0.right" timestamp="1609275134734">
+      <screen x="1920" y="0" width="1280" height="984" />
+    </state>
+    <state width="1877" height="467" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1609267873121" />
+    <state width="1237" height="229" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1609275134734" />
+    <state width="1877" height="96" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609226491109" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1609259322300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="96" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608325737229" />
-    <state width="1877" height="96" key="GridCell.Tab.0.center" timestamp="1608325737229">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="96" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608325737229" />
-    <state width="1877" height="96" key="GridCell.Tab.0.left" timestamp="1608325737229">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="96" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608325737229" />
-    <state width="1877" height="96" key="GridCell.Tab.0.right" timestamp="1608325737229">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="96" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608325737229" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1609259322300" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Gltf_file_sharing.API/Controllers/TestController.cs</url>
-          <line>165</line>
+          <line>151</line>
           <properties documentPath="C:\Users\Alexander\Desktop\TEST-AR\Back\draft\Gltf_file_sharing\Gltf_file_sharing.API\Controllers\TestController.cs" initialLine="164">
             <startOffsets>
               <option value="7046" />

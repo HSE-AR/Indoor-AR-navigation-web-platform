@@ -40,7 +40,7 @@ namespace Gltf_file_sharing.API
 
             AddDbConnection(services);
 
-            AddCorsConfiguration(services);
+            //AddCorsConfiguration(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +52,11 @@ namespace Gltf_file_sharing.API
             }
 
             app.UseRouting();
+            
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod());
 
             app.UseAuthorization();
 
