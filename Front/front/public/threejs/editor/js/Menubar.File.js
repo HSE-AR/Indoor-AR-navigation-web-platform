@@ -267,6 +267,8 @@ function MenubarFile( editor ) {
 	option.onClick( function () {
 
 		var scene = editor.scene;
+		console.log(scene)
+
 		var animations = getAnimations( scene );
 
 		var exporter = new GLTFExporter();

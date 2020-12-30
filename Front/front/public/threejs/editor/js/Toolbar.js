@@ -12,7 +12,7 @@ function Toolbar( editor ) {
 
 	var translateIcon = document.createElement( 'img' );
 	translateIcon.title = strings.getKey( 'toolbar/translate' );
-	translateIcon.src = 'translate.svg';
+	translateIcon.src = '/translate.svg';
 
 	var translate = new UIButton();
 	translate.dom.className = 'Button selected';
@@ -26,7 +26,7 @@ function Toolbar( editor ) {
 
 	var rotateIcon = document.createElement( 'img' );
 	rotateIcon.title = strings.getKey( 'toolbar/rotate' );
-	rotateIcon.src = 'rotate.svg';
+	rotateIcon.src = '/rotate.svg';
 
 	var rotate = new UIButton();
 	rotate.dom.appendChild( rotateIcon );
@@ -39,7 +39,7 @@ function Toolbar( editor ) {
 
 	var scaleIcon = document.createElement( 'img' );
 	scaleIcon.title = strings.getKey( 'toolbar/scale' );
-	scaleIcon.src = 'scale.svg';
+	scaleIcon.src = '/scale.svg';
 
 	var scale = new UIButton();
 	scale.dom.appendChild( scaleIcon );
