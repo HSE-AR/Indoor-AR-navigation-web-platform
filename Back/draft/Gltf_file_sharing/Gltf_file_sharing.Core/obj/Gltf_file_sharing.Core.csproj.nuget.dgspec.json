@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Core\\Gltf_file_sharing.Core.csproj": {}
+    "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Core\\Gltf_file_sharing.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Core\\Gltf_file_sharing.Core.csproj": {
+    "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Core\\Gltf_file_sharing.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Core\\Gltf_file_sharing.Core.csproj",
+        "projectUniqueName": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Core\\Gltf_file_sharing.Core.csproj",
         "projectName": "Gltf_file_sharing.Core",
-        "projectPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Core\\Gltf_file_sharing.Core.csproj",
-        "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Core\\obj\\",
+        "projectPath": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Core\\Gltf_file_sharing.Core.csproj",
+        "packagesPath": "C:\\Users\\X1CARBON\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\X1CARBON\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj": {
-                "projectPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj"
+              "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj": {
+                "projectPath": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj"
               }
             }
           }
@@ -74,21 +77,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj": {
+    "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj",
+        "projectUniqueName": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj",
         "projectName": "Gltf_file_sharing.Data",
-        "projectPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj",
-        "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexander\\Desktop\\TEST-AR\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\obj\\",
+        "projectPath": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\Gltf_file_sharing.Data.csproj",
+        "packagesPath": "C:\\Users\\X1CARBON\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\X1CARBON\\source\\repos\\Indoor-AR-navigation-web-platform\\Back\\draft\\Gltf_file_sharing\\Gltf_file_sharing.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\X1CARBON\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -144,7 +150,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -22,10 +22,10 @@
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
       "environmentVariables": {
-        "ASPNETCORE_URLS": "https://localhost:5555;https://192.168.0.103:5555",
+        "ASPNETCORE_URLS": "https://localhost:5555",
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://192.168.0.103:5555"
+      "applicationUrl": "https://localhost:5555"
     }
   }
 }
