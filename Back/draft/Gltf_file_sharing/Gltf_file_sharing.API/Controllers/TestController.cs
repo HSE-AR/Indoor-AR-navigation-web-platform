@@ -46,7 +46,7 @@ namespace Gltf_file_sharing.API.Controllers
                 name = "materials";
             else if (modificationDto.ObjectType == ObjectTypes.Object)
                 name = "object";
-            else if (modificationDto.ObjectType == ObjectTypes.ObjectChildren)
+            else if (modificationDto.ObjectType == ObjectTypes.ObjectChild)
                 name = "children";
             
             if(name == "geometries" || name == "materials")
