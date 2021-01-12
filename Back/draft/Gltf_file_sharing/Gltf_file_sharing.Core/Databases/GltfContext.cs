@@ -1,12 +1,13 @@
 ﻿using Gltf_file_sharing.Data.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Gltf_file_sharing.Core.EF
 {
-    public class GltfContext : DbContext
+    public class GltfContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     {
         public DbSet<GltfFile> GltfFiles { get; set; }
 
@@ -17,6 +18,27 @@ namespace Gltf_file_sharing.Core.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<IdentityRole<Guid>>().HasData(
+                new IdentityRole<Guid>[]
+                {
+                    new IdentityRole<Guid>
+                    {
+                        Id = Guid.NewGuid(),
+                        Name = "admin",
+                        NormalizedName = "ADMIN"
+                    }
+                });
+
+            modelBuilder.Entity<IdentityRole<Guid>>().HasData(
+                new IdentityRole<Guid>[]
+                {
+                     new IdentityRole<Guid>
+                     {
+                        Id = Guid.NewGuid(),
+                        Name = "superadmin",
+                        NormalizedName = "SUPERADMIN"
+                     }
+                });
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -3,15 +3,24 @@ using Gltf_file_sharing.Core.EF;
 using Gltf_file_sharing.Core.Repositories;
 using Gltf_file_sharing.Core.Services;
 using Gltf_file_sharing.Core.Services.Impl;
+using Gltf_file_sharing.Data.Entities;
 using Gltf_file_sharing.Data.Repositories;
 using Gltf_file_sharing.Data.Settings;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using StudentResumes.AUTH;
+using StudentResumes.AUTH.Interfaces;
+using StudentResumes.AUTH.Services;
+using System;
+using System.Text;
 
 namespace Gltf_file_sharing.API
 {
@@ -39,6 +48,10 @@ namespace Gltf_file_sharing.API
             AddServices(services);
 
             AddDbConnection(services);
+
+            ConfigureIdentity(services);
+
+            ConfigureAuthentication(services, Configuration);
 
             //AddCorsConfiguration(services);
         }
@@ -76,12 +89,12 @@ namespace Gltf_file_sharing.API
 
         private static void AddServices(IServiceCollection services)
         {
-
-
             services.AddSingleton<IModelsDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<ModelsDatabaseSettings>>().Value);
             services.AddTransient<IStorageService, StorageService>();
             services.AddTransient<IModificationService, ModificationService>();
+            services.AddTransient<IJwtGenerator, JwtGenerator>();
+            services.AddTransient<IAuthService, AuthService>();
         }
 
         private static void AddCorsConfiguration(IServiceCollection services) =>
@@ -108,6 +121,42 @@ namespace Gltf_file_sharing.API
                    b => b.MigrationsAssembly("Gltf_file_sharing.API")));
 
             services.AddSingleton<MongoContext>();
+
+        }
+
+        private void ConfigureAuthentication(IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                    .AddJwtBearer(options =>
+                    {
+                        options.RequireHttpsMetadata = true;
+                        options.TokenValidationParameters = new TokenValidationParameters
+                        {
+                            ValidateAudience = true,
+                            ValidAudience = configuration["Audience"],
+                            ValidateIssuer = true,
+                            ValidIssuer = configuration["Issuer"],
+                            ValidateIssuerSigningKey = true,
+                            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Key"])),
+                            ValidateLifetime = true
+                        };
+                    });
+        }
+
+
+        private void ConfigureIdentity(IServiceCollection services)
+        {
+            services.AddIdentity<User, IdentityRole<Guid>>(o =>
+            {
+                o.Password.RequireNonAlphanumeric = false;
+                o.Password.RequireUppercase = false;
+                o.Password.RequireLowercase = false;
+            })
+                .AddEntityFrameworkStores<GltfContext>();
 
         }
 
