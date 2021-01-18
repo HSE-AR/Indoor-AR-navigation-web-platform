@@ -2,6 +2,7 @@
 using Gltf_file_sharing.Core.Repositories;
 using Gltf_file_sharing.Data.DTO;
 using Gltf_file_sharing.Data.Entities;
+using Gltf_file_sharing.Data.Repositories;
 using Gltf_file_sharing.Data.Settings;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -18,19 +19,22 @@ namespace Gltf_file_sharing.Core.Services
         private readonly ModificationRepository _modificationRepository;
         //нужен прямой доступ к коллекции (а не к репозиторию), для экономии памяти и времени 
         private readonly IMongoCollection<BsonDocument> _models;
+        private readonly IUserModelIdRepository _userModelIdRepository;
 
 
-        public ModificationService(MongoContext context, ModificationRepository modRep)
+        public ModificationService(MongoContext context, ModificationRepository modRep, IUserModelIdRepository userModelIdRepository)
         {
             _modificationRepository = modRep;
             _models = context.ModelsAsBsonDocument;
+            _userModelIdRepository = userModelIdRepository;
         }
 
         public async Task<IEnumerable<ModificationDto>> GetAsync() =>
             (await _modificationRepository.GetAsync()).Select(x => new ModificationDto(x));
 
-        public async Task<bool> ModifyModel(ModificationDto modificationDto)
+        public async Task<bool> ModifyModel(ModificationDto modificationDto, Guid userId)
         {
+            CheckModelOwnership(modificationDto.ModelId, userId);
             Modification mod = new Modification(modificationDto);
 
             var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(mod.ModelId));
@@ -62,15 +66,22 @@ namespace Gltf_file_sharing.Core.Services
             return true;
         }
 
-        public async Task<bool> ModifyModels(IEnumerable<ModificationDto> modificationDtos)
+        public async Task<bool> ModifyModels(IEnumerable<ModificationDto> modificationDtos, Guid userId)
         {
             bool result = true;
             foreach (var moddto in modificationDtos)
-                result &= await ModifyModel(moddto);
+                result &= await ModifyModel(moddto, userId);
 
             return result;
         }
 
+        private bool CheckModelOwnership(string modelId, Guid userId)
+        {
+            var userModelId = _userModelIdRepository.GetAsync(modelId, userId);
+            if (userModelId == null)
+                throw new Exception("User has not rights to edit this model");
+            return true;
+        }
         #region private methods
 
         private async Task<UpdateResult> AddElementsToModelAsync(FilterDefinition<BsonDocument> filter, Modification modification)

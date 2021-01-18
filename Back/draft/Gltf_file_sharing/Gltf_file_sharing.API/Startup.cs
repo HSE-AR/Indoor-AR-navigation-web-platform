@@ -40,20 +40,20 @@ namespace Gltf_file_sharing.API
                 .AddControllers()
                 .AddNewtonsoftJson(
                 x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-
-            AddRepositories(services);
-
+            
             AddSettings(services);
+
+            ConfigureIdentity(services);
+
+            ConfigureAuthentication(services, Configuration);
+            
+            AddRepositories(services);
 
             AddServices(services);
 
             AddDbConnection(services);
 
-            ConfigureIdentity(services);
-
-            ConfigureAuthentication(services, Configuration);
-
-            //AddCorsConfiguration(services);
+            AddCorsConfiguration(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,27 +64,29 @@ namespace Gltf_file_sharing.API
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("AllowAll");
+
+            app.UseAuthentication(); 
+            
             app.UseRouting();
             
-            app.UseCors(x => x
-                .AllowAnyOrigin()
-                .AllowAnyHeader()
-                .AllowAnyMethod());
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+         
         }
 
         #region Private methods
         private static void AddRepositories(IServiceCollection services)
         {
             services.AddTransient<IGltfFileRepository, GltfFileRepository>();
-            services.AddSingleton<ModificationRepository>();
-            services.AddSingleton<ModelsRepository>();
+            services.AddTransient<ModificationRepository>();
+            services.AddTransient<ModelsRepository>();
+            services.AddScoped<IUserModelIdRepository, UserModelIdRepository>();
         }
 
         private static void AddServices(IServiceCollection services)
@@ -95,6 +97,7 @@ namespace Gltf_file_sharing.API
             services.AddTransient<IModificationService, ModificationService>();
             services.AddTransient<IJwtGenerator, JwtGenerator>();
             services.AddTransient<IAuthService, AuthService>();
+            services.AddTransient<IModelsService, ModelsService>();
         }
 
         private static void AddCorsConfiguration(IServiceCollection services) =>
@@ -102,8 +105,7 @@ namespace Gltf_file_sharing.API
                options.AddPolicy("AllowAll", builder =>
                builder.AllowAnyOrigin()
                       .AllowAnyMethod()
-                      .AllowAnyHeader()
-                      .AllowCredentials());
+                      .AllowAnyHeader());
            });
 
         private void AddSettings(IServiceCollection services)

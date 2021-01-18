@@ -10,6 +10,8 @@ namespace Gltf_file_sharing.Data.Entities
     {
         public string Name { get; set; }
 
+        public ICollection<UserModelId> ModelsId { get; set; } = new List<UserModelId>();
+
         public User(UserDto item)
         {
             Name = item.Name;

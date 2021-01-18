@@ -1,11 +1,14 @@
 ﻿using Gltf_file_sharing.Core.Databases;
+using Gltf_file_sharing.Core.EF;
 using Gltf_file_sharing.Data.Converters;
 using Gltf_file_sharing.Data.DTO;
 using Gltf_file_sharing.Data.Entities;
+using Microsoft.AspNetCore.Identity;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Gltf_file_sharing.Core.Repositories
@@ -25,6 +28,8 @@ namespace Gltf_file_sharing.Core.Repositories
         public async Task<ModelDto> GetAsync(string id) =>
             ModelConverter.Convert(await _models.Find(m => m.Id == id).FirstOrDefaultAsync());
 
+        public async Task<ICollection<ModelDto>> GetAsync(ICollection<string> ids) =>
+            ModelConverter.Convert(await _models.Find(m => ids.Contains(m.Id)).ToListAsync());
 
         public async Task<ModelDto> CreateAsync(ModelDto modelDto)
         {

@@ -14,17 +14,12 @@ namespace StudentResumes.AUTH.Services
         private readonly SignInManager<User> _signInManager;
         private readonly UserManager<User> _userManager;
         private readonly IJwtGenerator _jwt;
-        private readonly GltfContext _context;
-        private readonly IConfiguration _configuration;
 
-        public AuthService(SignInManager<User> sim, UserManager<User> um, IJwtGenerator jwt, GltfContext context,
-            IConfiguration configuration)
+        public AuthService(SignInManager<User> sim, UserManager<User> um, IJwtGenerator jwt)
         {
             _signInManager = sim;
             _userManager = um;
             _jwt = jwt;
-            _context = context;
-            _configuration = configuration;
         }
 
         public async Task<object> Login(string email, string password)

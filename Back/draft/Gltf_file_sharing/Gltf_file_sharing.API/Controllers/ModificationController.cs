@@ -1,5 +1,7 @@
-﻿using Gltf_file_sharing.Core.Services;
+﻿using Avatar.App.Api.Controllers;
+using Gltf_file_sharing.Core.Services;
 using Gltf_file_sharing.Data.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,13 +10,9 @@ using System.Threading.Tasks;
 
 namespace Gltf_file_sharing.API.Controllers
 {
-    //в чистовом проекте архитектура будет другая
-    //шаблонный репозиторий для запросов к бд для всех классов
-    //остальная логика реализована в сервисах
-    //в контроллерах только обращение к сервисам
-    //убрать конвертеры, реализовать данную логику через контсрукторы и др.
+
     [Route("api/[controller]")]
-    public class ModificationController : Controller
+    public class ModificationController : BaseAuthorizeController
     {
         private readonly IModificationService _modificationService;
 
@@ -24,6 +22,7 @@ namespace Gltf_file_sharing.API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "superadmin")]
         public async Task<ActionResult<IEnumerable<ModificationDto>>> GetAsync()
         {
             try
@@ -37,11 +36,13 @@ namespace Gltf_file_sharing.API.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<bool>> SetModification([FromBody] ModificationDto modificationDto)
         {
             try
             {
-                return await _modificationService.ModifyModel(modificationDto);
+                var userId = GetUserId();
+                return await _modificationService.ModifyModel(modificationDto, userId);
             }
             catch(Exception ex)
             {
@@ -50,11 +51,13 @@ namespace Gltf_file_sharing.API.Controllers
         }
 
         [HttpPost("list")]
+        [Authorize]
         public async Task<ActionResult<bool>> SetModifications([FromBody] IEnumerable<ModificationDto> modificationDtos)
         {
             try
             {
-                return await _modificationService.ModifyModels(modificationDtos);
+                var userId = GetUserId();
+                return await _modificationService.ModifyModels(modificationDtos, userId);
             }
             catch (Exception ex)
             {

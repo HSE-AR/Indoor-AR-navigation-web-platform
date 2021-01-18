@@ -1,6 +1,9 @@
-﻿using Gltf_file_sharing.Core.Repositories;
+﻿using Avatar.App.Api.Controllers;
+using Gltf_file_sharing.Core.Repositories;
+using Gltf_file_sharing.Core.Services;
 using Gltf_file_sharing.Data.DTO;
 using Gltf_file_sharing.Data.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using Newtonsoft.Json.Linq;
@@ -13,13 +16,15 @@ namespace Gltf_file_sharing.API.Controllers
 {
 
         [Route("api/[controller]")]
-        public class ModelsController : Controller
+        public class ModelsController : BaseAuthorizeController
         {
             private readonly ModelsRepository _modelsRepository;
+            private readonly IModelsService _modelsService;
 
-            public ModelsController(ModelsRepository modelsRepository)
+            public ModelsController(ModelsRepository modelsRepository, IModelsService modelsService)
             {
                 _modelsRepository = modelsRepository;
+                _modelsService = modelsService;
             }
 
             [HttpGet]
@@ -39,14 +44,44 @@ namespace Gltf_file_sharing.API.Controllers
 
                 return model;
             }
+            
+            
+            [HttpGet("user")]
+            [Authorize]
+            public async Task<ActionResult<ICollection<ModelDto>>> GetUserModels()
+            {
+                try
+                {
+                    var userId = GetUserId();
+                    
+                    return new JsonResult(await _modelsService.GetUserModelsAsync(userId));
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex);
+                }
+            }
+
 
             [HttpPost]
+            [Authorize]
             public async Task<ActionResult<ModelDto>> Create([FromBody]ModelDto modelDto)
             {
-               return await _modelsRepository.CreateAsync(modelDto);
+                try
+                {
+                    var userId = GetUserId();
+                    await _modelsService.CreateModelAsync(modelDto, userId);
+                    return Ok();
+                }
+                catch(Exception ex)
+                {
+                    return BadRequest(ex);
+                }
+                
             }
 
             [HttpPut("{id:length(24)}")]
+            [Authorize]
             public async Task<IActionResult> Update(string id, Model modelIn)
             {
                 var model = _modelsRepository.GetAsync(id);
@@ -62,18 +97,20 @@ namespace Gltf_file_sharing.API.Controllers
             }
 
             [HttpDelete("{id:length(24)}")]
+            [Authorize]
             public async Task<IActionResult> Delete(string id)
             {
-                var model =  await _modelsRepository.GetAsync(id);
-
-                if (model == null)
+                try
                 {
-                    return NotFound();
+                    var userId = GetUserId();
+                    await _modelsService.DeleteModelAsync(id, userId);
+                    return Ok();
+                }
+                catch(Exception ex)
+                {
+                    return BadRequest(ex);
                 }
 
-                await _modelsRepository.RemoveAsync(model.Id);
-
-                return NoContent();
             }
         }
     }

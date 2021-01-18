@@ -3,13 +3,15 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
-
+using System.Threading.Tasks;
 
 namespace Gltf_file_sharing.Core.EF
 {
     public class GltfContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     {
         public DbSet<GltfFile> GltfFiles { get; set; }
+
+        public DbSet<UserModelId> UserModelIds { get; set; }
 
         public GltfContext(DbContextOptions<GltfContext> opt) : base(opt)
         {
@@ -18,6 +20,8 @@ namespace Gltf_file_sharing.Core.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<UserModelId>()
+                .HasKey(um => new { um.UserId, um.ModelId });
             modelBuilder.Entity<IdentityRole<Guid>>().HasData(
                 new IdentityRole<Guid>[]
                 {
@@ -39,7 +43,12 @@ namespace Gltf_file_sharing.Core.EF
                         NormalizedName = "SUPERADMIN"
                      }
                 });
+
+
+
             base.OnModelCreating(modelBuilder);
         }
+
+
     }
 }
