@@ -28,11 +28,13 @@ namespace Gltf_file_sharing.API.Controllers
             }
 
             [HttpGet]
+            [Authorize(Roles = "superadmin")]
             public async Task<ActionResult<ICollection<ModelDto>>> Get() =>
                  new JsonResult(await _modelsRepository.GetAsync());
  
 
             [HttpGet("{id:length(24)}", Name = "GetModel")]
+            [Authorize(Roles = "superadmin")]
             public async Task<ActionResult<ModelDto>> Get(string id)
             {
                 var model = await _modelsRepository.GetAsync(id);
