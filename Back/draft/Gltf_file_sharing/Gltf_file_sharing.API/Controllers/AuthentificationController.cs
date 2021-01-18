@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 namespace Gltf_file_sharing.API.Controllers
 {
     [Route("api/[controller]/[action]")]
-    public class AuthenticationController : Controller
+    public class AuthentificationController : Controller
     {
         private readonly IAuthService _authService;
 
-        public AuthenticationController(IAuthService authService)
+        public AuthentificationController(IAuthService authService)
         {
             _authService = authService;
         }
